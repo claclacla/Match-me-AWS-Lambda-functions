@@ -1,4 +1,4 @@
-# A-Pinecode-for-friend
+# A-Pinecone-for-friend
 AI-Powered Human Matchmaking App based on Pinecone and React Native
 
 This repository contains the code for a mobile application designed to help individuals find compatible connections in new environments. Developed with React Native and Expo, this app utilizes cutting-edge AI vector embeddings to enable intelligent matchmaking based on semantic similarity, moving beyond basic filtering.
