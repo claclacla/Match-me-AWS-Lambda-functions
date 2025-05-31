@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@pinecone-database/pinecone": "^6.0.1",
+    "@types/dotenv": "^6.1.1",
+    "dotenv": "^16.5.0",
+    "openai": "^5.0.1",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.24"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "create-pinecone-users-index": "node dist/pinecone/users/create.js",
+    "fill-pinecone-users-index": "node dist/pinecone/users/fill.js",
+    "dev": "npm run build && npm run start"
+  }
+}

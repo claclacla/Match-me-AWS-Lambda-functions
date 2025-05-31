@@ -1,0 +1,52 @@
+[
+    {
+        "id": "user_001",
+        "name": "Alex Johnson",
+        "bio": "Passionate about indie films and jazz music. I love nature walks and discovering new coffee shops in the city."
+    },
+    {
+        "id": "user_002",
+        "name": "Ben Davis",
+        "bio": "I love sports, especially soccer and running. I'm also into tech and video games, a very energetic person."
+    },
+    {
+        "id": "user_003",
+        "name": "Chloe Miller",
+        "bio": "Big fan of music festivals and contemporary art. You'll often find me visiting galleries or at a live concert."
+    },
+    {
+        "id": "user_004",
+        "name": "Daniel White",
+        "bio": "I enjoy cooking, especially international recipes. I'm an avid reader of thrillers and love board games."
+    },
+    {
+        "id": "user_005",
+        "name": "Emily Brown",
+        "bio": "I adore exploring new cities and cultures. I'm an adventurer at heart, always ready for a spontaneous trip or a new hike."
+    },
+    {
+        "id": "user_006",
+        "name": "Frank Green",
+        "bio": "Lover of landscape photography and mountains. I spend my weekends trekking and capturing moments with my DSLR."
+    },
+    {
+        "id": "user_007",
+        "name": "Grace Taylor",
+        "bio": "I appreciate good books and art-house films. I enjoy a quiet evening at home with a novel or a classic movie."
+    },
+    {
+        "id": "user_008",
+        "name": "Henry Wilson",
+        "bio": "Software developer and gamer in my free time. I'm curious about all new technologies and enjoy solving complex problems."
+    },
+    {
+        "id": "user_009",
+        "name": "Ivy Moore",
+        "bio": "I love dancing, especially salsa and bachata. I also like experimenting in the kitchen and hosting dinner parties with friends."
+    },
+    {
+        "id": "user_010",
+        "name": "Jack Lewis",
+        "bio": "Passionate about electronic music and DJ sets. I enjoy going to concerts and discovering new artists, always looking for the right beat."
+    }
+]
