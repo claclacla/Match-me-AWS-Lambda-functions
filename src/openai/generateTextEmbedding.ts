@@ -1,4 +1,4 @@
-export async function generateEmbedding({ openai, text, dimension }:
+export async function generateTextEmbedding({ openai, text, dimension }:
     { openai: any, text: string, dimension: number }): Promise<number[]> {
     console.log(`Embedding generation for: "${text.substring(0, Math.min(text.length, 50))}..."`);
 

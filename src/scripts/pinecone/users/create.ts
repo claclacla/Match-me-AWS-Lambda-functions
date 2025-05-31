@@ -16,7 +16,7 @@ const pc = new Pinecone({
     apiKey: PINECONE_KEY
 });
 
-async function createPineconeIndex() {
+async function create() {
     try {
         console.log(`Check if "${INDEX_NAME}" exists...`);
 
@@ -56,4 +56,4 @@ async function createPineconeIndex() {
     }
 }
 
-createPineconeIndex();
+create();

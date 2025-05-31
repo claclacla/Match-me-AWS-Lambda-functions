@@ -11,8 +11,9 @@
   },
   "scripts": {
     "build": "npx tsc",
-    "create-pinecone-users-index": "node dist/pinecone/users/create.js",
-    "fill-pinecone-users-index": "node dist/pinecone/users/fill.js",
+    "create-pinecone-users-index": "node dist/scripts/pinecone/users/create.js",
+    "fill-pinecone-users-index": "node dist/scripts/pinecone/users/fill.js",
+    "insert-pinecone-users-index": "node dist/scripts/pinecone/users/insert.js",
     "dev": "npm run build && npm run start"
   }
 }
