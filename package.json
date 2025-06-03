@@ -14,6 +14,7 @@
     "create-pinecone-users-index": "node dist/scripts/pinecone/users/create.js",
     "fill-pinecone-users-index": "node dist/scripts/pinecone/users/fill.js",
     "insert-pinecone-users-index": "node dist/scripts/pinecone/users/insert.js",
+    "find-similar-users-by-id": "node dist/scripts/pinecone/users/findSimilarUsersById.js",
     "dev": "npm run build && npm run start"
   }
 }

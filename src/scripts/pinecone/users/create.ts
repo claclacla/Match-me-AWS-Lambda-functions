@@ -1,6 +1,8 @@
 import { Pinecone } from '@pinecone-database/pinecone';
 import * as dotenv from 'dotenv';
 
+import { PINECONE, DATA } from "../../../../config.json";
+
 dotenv.config();
 
 const PINECONE_KEY = process.env.PINECONE_KEY;
@@ -9,16 +11,13 @@ if (PINECONE_KEY === undefined) {
     process.exit(1);
 }
 
-const INDEX_NAME: string = 'users';
-const EMBEDDING_DIMENSION = 1536; // text-embedding-3-small dimension
-
 const pc = new Pinecone({
     apiKey: PINECONE_KEY
 });
 
 async function create() {
     try {
-        console.log(`Check if "${INDEX_NAME}" exists...`);
+        console.log(`Check if "${PINECONE.INDEXES.USERS}" exists...`);
 
         const indexList = await pc.listIndexes();
 
@@ -26,29 +25,29 @@ async function create() {
             return;
         }
 
-        const indexExists = indexList.indexes.some(index => index.name === INDEX_NAME);
+        const indexExists = indexList.indexes.some(index => index.name === PINECONE.INDEXES.USERS);
 
         if (!indexExists) {
-            console.log(`Creation of the index: "${INDEX_NAME}"...`);
+            console.log(`Creation of the index: "${PINECONE.INDEXES.USERS}"...`);
 
             await pc.createIndex({
-                name: INDEX_NAME,
+                name: PINECONE.INDEXES.USERS,
                 spec: {
                     serverless: {
                         cloud: 'aws',
                         region: 'us-east-1',
                     }
                 },
-                dimension: EMBEDDING_DIMENSION,
+                dimension: DATA.EMBEDDING_DIMENSION,
                 metric: 'cosine',
             });
 
-            console.log(`Index "${INDEX_NAME}" created!`);
+            console.log(`Index "${PINECONE.INDEXES.USERS}" created!`);
 
             console.log("Waiting for the index creation...");
             await new Promise(resolve => setTimeout(resolve, 3000)); 
         } else {
-            console.log(`The index"${INDEX_NAME}" already exists!`);
+            console.log(`The index"${PINECONE.INDEXES.USERS}" already exists!`);
         }
     } catch (error: any) {
         console.error("Error:", error.message || error);
