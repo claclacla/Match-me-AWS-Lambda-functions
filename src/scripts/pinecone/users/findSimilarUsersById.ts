@@ -3,6 +3,8 @@ import * as dotenv from 'dotenv';
 import { PINECONE } from "../../../../config.json";
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
+import { getByIds } from '../../../repositories/pinecone/getByIds';
+import { query } from '../../../repositories/pinecone/query';
 
 dotenv.config();
 
@@ -19,7 +21,7 @@ async function findSimilarUsersById(targetId: string, topK: number = 2) {
     try {
         console.log(`\nLooking for similar users by id: "${targetId}"`);
 
-        const fetchResult = await usersIndex.fetch([targetId]);
+        const fetchResult = await getByIds({ index: usersIndex, ids: [targetId] });
 
         if (!fetchResult.records || Object.keys(fetchResult.records).length === 0) {
             console.warn(`Attention: The required vector doesn't exist. Id: ${targetId}.`);
@@ -35,10 +37,13 @@ async function findSimilarUsersById(targetId: string, topK: number = 2) {
 
         const queryVector = targetVector.values;
 
-        const queryResult = await usersIndex.query({
-            vector: queryVector,
-            topK: topK + 1,
-            includeMetadata: true
+        const queryResult = await query({
+            index: usersIndex,
+            params: {
+                vector: queryVector,
+                topK: topK + 1,
+                includeMetadata: true
+            }
         });
 
         console.log(`\nResults for "${targetId}" (Top ${topK}):`);
