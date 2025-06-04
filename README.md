@@ -8,11 +8,17 @@ Utilizing `Pinecone` for efficient vector storage and AI embeddings for `semanti
 
 ## Status and TO DO
 
-I wrote four scripts: one to create the user index on Pinecone, one to seed it with initial data, one to insert a user, and one to search for users similar to a given user ID.
+I wrote four scripts: one to create the user index on `Pinecone`, one to seed it with initial data, one to insert a user, and one to search for users similar to a given user ID.
 
 The `findSimilarUsersById` script has now been used to create a Lambda function with the same name. This function retrieves similar users from Pinecone via AWS Lambda.
 
 Currently, all users can access each other's data and search for similar users. The next step is to introduce an `authenticatedUserId` parameter in Pinecone to associate AWS Cognito users with their respective data.
+
+--------------------------------------------------------------------------------
+
+## AWS 
+
+The infrastructure is based on: `Cognito` for user authentication, `AWS API Gateway` for defining the API, and `Lambda` for implementing the API functions.
 
 --------------------------------------------------------------------------------
 
