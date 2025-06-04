@@ -1,7 +1,7 @@
 import { Pinecone } from '@pinecone-database/pinecone';
 import * as dotenv from 'dotenv';
 
-import { PINECONE, DATA } from "../../../../config.json";
+import { PINECONE, DATA } from "../../../config/config.json";
 
 dotenv.config();
 

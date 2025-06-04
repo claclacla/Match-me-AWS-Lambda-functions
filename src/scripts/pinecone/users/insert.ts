@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 
-import { DATA, PINECONE } from "../../../../config.json";
+import { DATA, PINECONE } from "../../../config/config.json";
 
 import { UserDTO } from '../../../dtos/UserDTO';
 import { UserEntity } from '../../../entities/UserEntity';

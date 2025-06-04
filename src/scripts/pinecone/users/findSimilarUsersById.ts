@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 
-import { PINECONE } from "../../../../config.json";
+import { PINECONE } from "../../../config/config.json";
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
 import { getByIds } from '../../../repositories/pinecone/getByIds';
