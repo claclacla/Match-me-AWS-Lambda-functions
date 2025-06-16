@@ -23,33 +23,24 @@ const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
 
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
-/**
- * Inserts a new user into Pinecone after generating an embedding for their profile data.
- *
- * @param userId The unique ID of the user.
- * @param name The user's name.
- * @param bio The user's biography/description (used for embedding).
- * @param authenticatedUserId The ID of the user performing the operation (for ownership metadata).
- */
-
-async function insertUser(userEntity: UserEntity, authenticatedUserId: string) {
+async function insertUser({ user }: { user: UserEntity }) {
     try {
-        console.log(`\nInserting new user: "${userEntity.metadata.name}"`);
+        console.log(`\nInserting new user: "${user.metadata.name}"`);
 
         // 1. Generate embedding from the user's bio
 
-        const userVectorValues = await generateTextEmbedding({ openai, text: userEntity.metadata.bio, dimension: DATA.EMBEDDING_DIMENSION });
+        const userVectorValues = await generateTextEmbedding({ openai, text: user.metadata.bio, dimension: DATA.EMBEDDING_DIMENSION });
 
-        userEntity.values = userVectorValues;
+        user.values = userVectorValues;
 
         // 2. Upsert the vector into Pinecone
 
         await upsert({
             index: usersIndex,
-            vectors: [userEntity],
+            vectors: [user],
         });
 
-        console.log(`Successfully inserted user ${userEntity.metadata.name} into Pinecone.`);
+        console.log(`Successfully inserted user ${user.metadata.name} into Pinecone.`);
 
         return { success: true };
 
@@ -61,12 +52,6 @@ async function insertUser(userEntity: UserEntity, authenticatedUserId: string) {
         throw error; // Re-throw to be caught by the main handler
     }
 }
-
-/**
- * Main Lambda handler function.
- * This function is invoked by AWS Lambda.
- * It expects 'userId', 'name', and 'bio' in the request body (for POST requests).
- */
 
 export const handler = async (event: any) => {
     try {
@@ -129,7 +114,7 @@ export const handler = async (event: any) => {
 
         // 3. Call your core logic function to insert the user
 
-        const result = await insertUser(userEntity, authenticatedUserId);
+        const result = await insertUser({ user: userEntity });
 
         // 4. Return API Gateway-compatible success response
 

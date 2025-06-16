@@ -17,18 +17,9 @@ if (!PINECONE_KEY) {
 const pc = pineconeConnect({ key: PINECONE_KEY });
 const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
 
-/**
- * Fetches user vector by ID and queries Pinecone for similar users,
- * applying a filter for the authenticated ownerId.
- *
- * @param targetId The ID of the user whose vector to use for the query.
- * @param topK The number of top similar users to retrieve (excluding the target itself).
- * @param authenticatedUserId The ID of the user making the request (for filtering).
- */
-
-async function findSimilarUsersById(targetId: string, topK: number, authenticatedUserId: string) {
+async function findSimilarUsersById({ targetId, topK } : { targetId: string, topK: number }) {
     try {
-        console.log(`\nLooking for similar users by id: "${targetId}" for owner: "${authenticatedUserId}"`);
+        //console.log(`\nLooking for similar users by id: "${targetId}" for owner: "${authenticatedUserId}"`);
 
         // 1. Fetch the target vector from Pinecone by ID
 
@@ -75,7 +66,7 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
             },
         });
 
-        console.log(`\nResults for "${targetId}" (Top ${topK}) for owner ${authenticatedUserId}:`);
+        //console.log(`\nResults for "${targetId}" (Top ${topK}) for owner ${authenticatedUserId}:`);
 
         const similarUsers = [];
 
@@ -110,13 +101,6 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
         throw error; 
     }
 }
-
-
-/**
- * Main Lambda handler function.
- * This function is invoked by AWS Lambda.
- * It expects 'targetId' and 'topK' as query string parameters in a GET request.
- */
 
 export const handler = async (event: any) => {
     try {
@@ -153,7 +137,7 @@ export const handler = async (event: any) => {
 
         // 3. Call your core logic function
 
-        const results = await findSimilarUsersById(targetId, topK, authenticatedUserId);
+        const results = await findSimilarUsersById({ targetId, topK });
 
         // 4. Return API Gateway-compatible success response
 
