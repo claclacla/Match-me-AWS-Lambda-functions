@@ -42,6 +42,9 @@ async function fill() {
                 values: embedding,
                 metadata: {
                     name: user.name,
+                    gender: user.gender,
+                    location: user.location,
+                    age: user.age,
                     bio: user.bio,
                 },
             };

@@ -22,6 +22,51 @@ The infrastructure is based on: `Cognito` for user authentication, `AWS API Gate
 
 --------------------------------------------------------------------------------
 
+## Scripts
+
+The folder `assets` must contain a valid dataset in the `users.json` file. The description of the user is the `UserDTO.ts`.
+
+The .env file MUST contain the following properties:
+
+- OPENAI_API_KEY
+- PINECONE_KEY
+
+The scripts are built using the following command:
+
+```bash
+
+npm run build
+
+```
+
+### List of scripts
+
+- Create the index `users`
+
+```bash
+
+npm run create-pinecone-users-index
+
+```
+
+- Fill the index `users` with the assets data seeds
+
+```bash
+
+npm run fill-pinecone-users-index
+
+```
+
+- Insert a new user
+
+```bash
+
+npm run insert-pinecone-users-index
+
+```
+
+--------------------------------------------------------------------------------
+
 ## Deploy
 
 Every Lambda function needs a ZIP file to be uploaded. To create it, follow these steps:
@@ -58,4 +103,4 @@ The package is now ready to be uploaded to AWS Lambda!
 
 ## Authors
 
-- **Simone Adelchino** - [_claclacla_](https://twitter.com/_claclacla_)
+- **Simone Adelchino** - 

@@ -3,6 +3,9 @@ export interface UserEntity {
     values: number[],
     metadata: {
         name: string,
+        gender: string,
+        location: string,
+        age: number,
         bio: string
     }
 }

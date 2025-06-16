@@ -23,6 +23,9 @@ if (PINECONE_KEY === undefined || OPENAI_API_KEY === undefined) {
 const userDTO: UserDTO = {
     "id": "user_010",
     "name": "Jack Lewis",
+    "gender": "male",
+    "location": "",
+    "age": 23,
     "bio": "Passionate about electronic music and DJ sets. I enjoy going to concerts and discovering new artists, always looking for the right beat."
 };
 
@@ -39,6 +42,9 @@ async function insert({ user }: { user: UserDTO }) {
         values: embedding,
         metadata: {
             name: user.name,
+            gender: user.gender,
+            location: user.location,
+            age: user.age,
             bio: user.bio,
         },
     };

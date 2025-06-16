@@ -1,20 +1,14 @@
-// These paths might need adjustment based on your project structure once compiled for Lambda.
-// Make sure your config.json is accessible or use environment variables for these values.
-import { PINECONE } from "../config/config.json"; // Adjust this path if necessary
+import { PINECONE } from "../config/config.json";
 
-// Assuming these are your utility functions for Pinecone operations
 import { connect as pineconeConnect } from '../repositories/pinecone/connect';
 import { getByIds } from '../repositories/pinecone/getByIds';
 import { query } from '../repositories/pinecone/query';
 
-// Initialize Pinecone and OpenAI clients using environment variables
-// These values will be set in the AWS Lambda console as Environment Variables.
 const PINECONE_KEY = process.env.PINECONE_KEY;
 
 console.log("PINECONE_KEY: " + PINECONE_KEY);
 
 if (!PINECONE_KEY) {
-    // In a Lambda, you'd typically log an error and throw, not process.exit(1)
     console.error("Missing environment variables: PINECONE_KEY or OPENAI_API_KEY.");
 
     throw new Error("Missing API keys configuration.");
@@ -41,7 +35,7 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
 
         if (!fetchResult.records || Object.keys(fetchResult.records).length === 0) {
             console.warn(`Attention: The required vector doesn't exist for ID: ${targetId}.`);
-            return []; // Return empty array if no record found
+            return [];
         }
 
         const targetVector = fetchResult.records[targetId];
@@ -85,7 +79,6 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
         if (queryResult.matches && queryResult.matches.length > 0) {
             for (const match of queryResult.matches) {
 
-                // Ensure we don't return the target user itself and respect topK
                 if (match.id !== targetId && similarUsers.length < topK) {
                     const similarityScore = match.score !== undefined ? parseFloat(match.score.toFixed(4)) : 'N/A';
                     similarUsers.push({
@@ -111,7 +104,7 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
             console.error("Error details:", error.response.data);
         }
 
-        throw error; // Re-throw to be caught by the main handler
+        throw error; 
     }
 }
 
