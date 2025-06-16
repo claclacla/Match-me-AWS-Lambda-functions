@@ -42,6 +42,7 @@ async function insert({ user }: { user: UserDTO }) {
         id: user.id,
         values: embedding,
         metadata: {
+            ownerId: "",
             name: user.name,
             gender: user.gender,
             location: user.location,

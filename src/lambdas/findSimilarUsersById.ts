@@ -31,6 +31,7 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
         console.log(`\nLooking for similar users by id: "${targetId}" for owner: "${authenticatedUserId}"`);
 
         // 1. Fetch the target vector from Pinecone by ID
+
         const fetchResult = await getByIds({ index: usersIndex, ids: [targetId] });
 
         if (!fetchResult.records || Object.keys(fetchResult.records).length === 0) {
@@ -41,6 +42,7 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
         const targetVector = fetchResult.records[targetId];
 
         // 2. Validate the fetched vector and its ownership
+
         if (!targetVector || !targetVector.values) {
             console.error(`Error: the required vector doesn't contain any value for ID: ${targetId}.`);
             return [];
@@ -60,6 +62,7 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
         const queryVector = targetVector.values;
 
         // 3. Query Pinecone for similar vectors, applying ownerId filter
+
         const queryResult = await query({
             index: usersIndex,
             params: {
@@ -114,15 +117,18 @@ async function findSimilarUsersById(targetId: string, topK: number, authenticate
  * This function is invoked by AWS Lambda.
  * It expects 'targetId' and 'topK' as query string parameters in a GET request.
  */
+
 export const handler = async (event: any) => {
     try {
         console.log("Full Lambda event received:", JSON.stringify(event, null, 2));
 
-        // --- 1. Extract Authenticated User ID from API Gateway Authorizer ---
+        // 1. Extract Authenticated User ID from API Gateway Authorizer 
         const authenticatedUserId = event.requestContext?.authorizer?.jwt?.claims?.sub;
 
         if (!authenticatedUserId) {
+
             // This should not happen if Cognito Authorizer is correctly configured
+
             return {
                 statusCode: 401,
                 headers: { "Content-Type": "application/json" },
@@ -130,7 +136,8 @@ export const handler = async (event: any) => {
             };
         }
 
-        // --- 2. Extract Query Parameters from GET Request ---
+        // 2. Extract Query Parameters from GET Request
+
         const targetId = event.queryStringParameters?.targetId; // Assuming you'll pass the ID to search for
         const topK = parseInt(event.queryStringParameters?.topK || '2'); // Default to 2 if not provided
 
@@ -144,10 +151,12 @@ export const handler = async (event: any) => {
 
         console.log("targetId: " + targetId, " - topK: " + topK);
 
-        // --- 3. Call your core logic function ---
+        // 3. Call your core logic function
+
         const results = await findSimilarUsersById(targetId, topK, authenticatedUserId);
 
-        // --- 4. Return API Gateway-compatible success response ---
+        // 4. Return API Gateway-compatible success response
+
         return {
             statusCode: 200,
             headers: { "Content-Type": "application/json" },
@@ -157,8 +166,9 @@ export const handler = async (event: any) => {
     } catch (error: any) {
         console.error("Error in Lambda handler:", error);
 
-        // --- 5. Return API Gateway-compatible error response ---
+        // 5. Return API Gateway-compatible error response
         // Provide more specific error for Unauthorized access
+
         if (error.message === "Unauthorized: Access to target vector denied.") {
             return {
                 statusCode: 403, // 403 Forbidden for unauthorized access to specific data
