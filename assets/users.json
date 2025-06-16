@@ -1,6 +1,6 @@
 [
     {
-        "id": "user_001",
+        "id": "",
         "name": "Alex Johnson",
         "gender": "male",
         "location": "",
@@ -8,7 +8,7 @@
         "bio": "Passionate about indie films and jazz music. I love nature walks and discovering new coffee shops in the city."
     },
     {
-        "id": "user_002",
+        "id": "",
         "name": "Ben Davis",
         "gender": "male",
         "location": "",
@@ -16,7 +16,7 @@
         "bio": "I love sports, especially soccer and running. I'm also into tech and video games, a very energetic person."
     },
     {
-        "id": "user_003",
+        "id": "",
         "name": "Chloe Miller",
         "gender": "female",
         "location": "",
@@ -24,7 +24,7 @@
         "bio": "Big fan of music festivals and contemporary art. You'll often find me visiting galleries or at a live concert."
     },
     {
-        "id": "user_004",
+        "id": "",
         "name": "Daniel White",
         "gender": "non_binary",
         "location": "",
@@ -32,7 +32,7 @@
         "bio": "I enjoy cooking, especially international recipes. I'm an avid reader of thrillers and love board games."
     },
     {
-        "id": "user_005",
+        "id": "",
         "name": "Emily Brown",
         "gender": "non_binary",
         "location": "",
@@ -40,7 +40,7 @@
         "bio": "I adore exploring new cities and cultures. I'm an adventurer at heart, always ready for a spontaneous trip or a new hike."
     },
     {
-        "id": "user_006",
+        "id": "",
         "name": "Frank Green",
         "gender": "male",
         "location": "",
@@ -48,7 +48,7 @@
         "bio": "Lover of landscape photography and mountains. I spend my weekends trekking and capturing moments with my DSLR."
     },
     {
-        "id": "user_007",
+        "id": "",
         "name": "Grace Taylor",
         "gender": "female",
         "location": "",
@@ -56,7 +56,7 @@
         "bio": "I appreciate good books and art-house films. I enjoy a quiet evening at home with a novel or a classic movie."
     },
     {
-        "id": "user_008",
+        "id": "",
         "name": "Henry Wilson",
         "gender": "male",
         "location": "",
@@ -64,7 +64,7 @@
         "bio": "Software developer and gamer in my free time. I'm curious about all new technologies and enjoy solving complex problems."
     },
     {
-        "id": "user_009",
+        "id": "",
         "name": "Ivy Moore",
         "gender": "female",
         "location": "",

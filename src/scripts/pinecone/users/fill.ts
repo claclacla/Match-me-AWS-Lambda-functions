@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import { v4 as uuidv4 } from 'uuid';
 
 import { DATA, PINECONE } from "../../../config/config.json";
 import usersDataset from '../../../../assets/users.json';
@@ -35,6 +36,7 @@ async function fill() {
         const vectorsToUpsert: UserEntity[] = [];
 
         for (const user of users) {
+            user.id = uuidv4();
             const embedding = await generateTextEmbedding({ openai, text: user.bio, dimension: DATA.EMBEDDING_DIMENSION });
 
             const userEntity: UserEntity = {

@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import { v4 as uuidv4 } from 'uuid';
 
 import { DATA, PINECONE } from "../../../config/config.json";
 
@@ -21,7 +22,7 @@ if (PINECONE_KEY === undefined || OPENAI_API_KEY === undefined) {
 }
 
 const userDTO: UserDTO = {
-    "id": "user_010",
+    "id": uuidv4(),
     "name": "Jack Lewis",
     "gender": "male",
     "location": "",
