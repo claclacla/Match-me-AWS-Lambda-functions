@@ -7,6 +7,8 @@ import { upsert } from '../repositories/pinecone/upsert';
 
 import { connect as openAIConnect } from '../openai/connect';
 import { generateTextEmbedding } from '../openai/generateTextEmbedding';
+import { generateUserCreationPrompt } from '../openai/generateUserCreationPrompt';
+
 import { UserEntity } from "src/entities/UserEntity";
 import { UserDTO } from 'src/dtos/UserDTO';
 
@@ -23,24 +25,43 @@ const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
 
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
-async function insertUser({ user }: { user: UserEntity }) {
+async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, authenticatedUserId: string }) {
     try {
-        console.log(`\nInserting new user: "${user.metadata.name}"`);
+        console.log(`\nInserting new user: "${userDTO.name}"`);
 
         // 1. Generate embedding from the user's bio
 
-        const userVectorValues = await generateTextEmbedding({ openai, text: user.metadata.bio, dimension: DATA.EMBEDDING_DIMENSION });
+        const embedding = await generateTextEmbedding({ 
+            openai, 
+            text: generateUserCreationPrompt(userDTO), 
+            dimension: DATA.EMBEDDING_DIMENSION 
+        });
 
-        user.values = userVectorValues;
+        // 2. Create the entity and the user creation prompt
 
-        // 2. Upsert the vector into Pinecone
+        // TO DO: Add a parser from UserDTO to UserEntity
+
+        const userEntity: UserEntity = {
+            id: uuidv4(),
+            values: embedding,
+            metadata: {
+                ownerId: authenticatedUserId,
+                name: userDTO.name,
+                gender: userDTO.gender,
+                location: userDTO.location,
+                age: userDTO.age,
+                bio: userDTO.bio
+            }
+        }
+
+        // 3. Upsert the vector into Pinecone
 
         await upsert({
             index: usersIndex,
-            vectors: [user],
+            vectors: [userEntity],
         });
 
-        console.log(`Successfully inserted user ${user.metadata.name} into Pinecone.`);
+        console.log(`Successfully inserted user ${userEntity.metadata.name} into Pinecone.`);
 
         return { success: true };
 
@@ -95,26 +116,11 @@ export const handler = async (event: any) => {
         }
         */
 
-        // TO DO: Add a parser from UserDTO to UserEntity
-
-        const userEntity: UserEntity = {
-            id: uuidv4(),
-            values: [],
-            metadata: {
-                ownerId: authenticatedUserId,
-                name: userDTO.name,
-                gender: userDTO.gender,
-                location: userDTO.location,
-                age: userDTO.age,
-                bio: userDTO.bio
-            }
-        }
-
-        console.log(`Received user data - name: ${userEntity.metadata.name}`);
+        console.log(`Received user data - name: ${userDTO.name}`);
 
         // 3. Call your core logic function to insert the user
 
-        const result = await insertUser({ user: userEntity });
+        const result = await insertUser({ userDTO, authenticatedUserId });
 
         // 4. Return API Gateway-compatible success response
 

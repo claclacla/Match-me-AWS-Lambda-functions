@@ -8,6 +8,7 @@ import { UserEntity } from '../../../entities/UserEntity';
 
 import { connect as openAIConnect } from '../../../openai/connect';
 import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
+import { generateUserCreationPrompt } from '../../../openai/generateUserCreationPrompt';
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
 import { upsert } from '../../../repositories/pinecone/upsert';
@@ -36,7 +37,11 @@ const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
 async function insert({ user }: { user: UserDTO }) {
-    const embedding = await generateTextEmbedding({ openai, text: user.bio, dimension: DATA.EMBEDDING_DIMENSION });
+    const embedding = await generateTextEmbedding({ 
+        openai, 
+        text: generateUserCreationPrompt(user), 
+        dimension: DATA.EMBEDDING_DIMENSION 
+    });
 
     const userEntity: UserEntity = {
         id: user.id,
