@@ -1,74 +1,182 @@
 [
-    {
-        "id": "",
-        "name": "Alex Johnson",
-        "gender": "male",
-        "location": "",
-        "age": 45,
-        "bio": "Passionate about indie films and jazz music. I love nature walks and discovering new coffee shops in the city."
-    },
-    {
-        "id": "",
-        "name": "Ben Davis",
-        "gender": "male",
-        "location": "",
-        "age": 19,
-        "bio": "I love sports, especially soccer and running. I'm also into tech and video games, a very energetic person."
-    },
-    {
-        "id": "",
-        "name": "Chloe Miller",
-        "gender": "female",
-        "location": "",
-        "age": 62,
-        "bio": "Big fan of music festivals and contemporary art. You'll often find me visiting galleries or at a live concert."
-    },
-    {
-        "id": "",
-        "name": "Daniel White",
-        "gender": "non_binary",
-        "location": "",
-        "age": 34,
-        "bio": "I enjoy cooking, especially international recipes. I'm an avid reader of thrillers and love board games."
-    },
-    {
-        "id": "",
-        "name": "Emily Brown",
-        "gender": "non_binary",
-        "location": "",
-        "age": 56,
-        "bio": "I adore exploring new cities and cultures. I'm an adventurer at heart, always ready for a spontaneous trip or a new hike."
-    },
-    {
-        "id": "",
-        "name": "Frank Green",
-        "gender": "male",
-        "location": "",
-        "age": 45,
-        "bio": "Lover of landscape photography and mountains. I spend my weekends trekking and capturing moments with my DSLR."
-    },
-    {
-        "id": "",
-        "name": "Grace Taylor",
-        "gender": "female",
-        "location": "",
-        "age": 31,
-        "bio": "I appreciate good books and art-house films. I enjoy a quiet evening at home with a novel or a classic movie."
-    },
-    {
-        "id": "",
-        "name": "Henry Wilson",
-        "gender": "male",
-        "location": "",
-        "age": 22,
-        "bio": "Software developer and gamer in my free time. I'm curious about all new technologies and enjoy solving complex problems."
-    },
-    {
-        "id": "",
-        "name": "Ivy Moore",
-        "gender": "female",
-        "location": "",
-        "age": 34,
-        "bio": "I love dancing, especially salsa and bachata. I also like experimenting in the kitchen and hosting dinner parties with friends."
-    }
+  {
+    "id": "ab3c9e1a-347e-4459-85ea-2e99b6e340d4",
+    "name": "Alex Johnson",
+    "gender": "male",
+    "age": 45,
+    "location": "Milan",
+    "insights": [
+      "You arrive at a large square where a crowd gathers. Music echoes from the side streets. What do you do? Climb a tower to get a better view.",
+      "A host offers you a companion to explore with. Who do you pick? A grounded local with strong opinions.",
+      "Someone invites you to an underground event. It’s unstructured, strange, and secret. How do you respond? Politely decline and ask what it’s about first.",
+      "You're asked to join a spontaneous performance. What do you do? Join, but only as an observer/supporter.",
+      "You’re placed in a room with strangers for 5 minutes. What do you do? Ask a thought-provoking question.",
+      "You’re asked to draw a memory that defines you. What do you draw? Draw a place.",
+      "You can join one of three groups in the city. Which do you choose? The Builders – thinkers, planners, debaters.",
+      "When you connect with someone, what do you most want to feel? Understood."
+    ],
+    "narrative": "You move through the world with curiosity and caution. You like to gain perspective before acting, often stepping back to see the full picture. You’re drawn to grounded, opinionated people who help you stay rooted. When something unfamiliar comes your way, you approach it thoughtfully. In social spaces, you ask questions that spark meaningful conversations. Your memories are tied to the places that shaped you. You think like a Builder, and deep down, what you want most is to feel understood."
+  },
+  {
+    "id": "135e7f70-1b25-4b41-a4d6-18d4909437d4",
+    "name": "Ben Davis",
+    "gender": "male",
+    "age": 19,
+    "location": "Milan",
+    "insights": [
+      "You arrive at a large square where a crowd gathers. Music echoes from the side streets. What do you do? Follow the music.",
+      "A host offers you a companion to explore with. Who do you pick? A hyper-curious guide asking endless questions.",
+      "Someone invites you to an underground event. How do you respond? Accept immediately.",
+      "You're asked to join a spontaneous performance. What do you do? Dive in without thinking.",
+      "You’re placed in a room with strangers. What do you do? Start talking and break the ice.",
+      "You’re asked to draw a memory that defines you. What do you draw? Draw a symbol or abstract shape.",
+      "You can join one of three groups. Which do you choose? The Dreamers – idealists, artists, rebels.",
+      "When you connect with someone, what do you most want to feel? Inspired."
+    ],
+    "narrative": "You act on instinct and energy. When music plays, you follow it. You’re drawn to curious minds who question everything. You dive into the unknown without hesitation. You embrace performance, expression, and connection. In any group, you're the one who breaks the ice. Your memories are abstract and full of emotion. You align with Dreamers—rebels, artists, idealists. And what drives you most is the desire to feel inspired."
+  },
+  {
+    "id": "c1bc0e7a-47da-49b5-80cf-9b8379d9f27a",
+    "name": "Chloe Miller",
+    "gender": "female",
+    "age": 62,
+    "location": "Milan",
+    "insights": [
+      "You arrive at a large square where a crowd gathers. What do you do? Approach a group chatting calmly.",
+      "A host offers you a companion to explore with. Who do you pick? A silent artist sketching in the corner.",
+      "Someone invites you to an underground event. How do you respond? Avoid it — doesn’t feel safe.",
+      "You're asked to join a spontaneous performance. What do you do? Avoid it, not your thing.",
+      "You’re placed in a room with strangers. What do you do? Wait for someone to speak to you.",
+      "You’re asked to draw a memory. What do you draw? Draw a symbol or abstract shape.",
+      "You can join one of three groups. Which do you choose? The Dreamers – idealists, artists, rebels.",
+      "When you connect with someone, what do you most want to feel? At peace."
+    ],
+    "narrative": "You prefer peace and quiet. You gravitate toward calm conversations and gentle company. You choose safety over chaos and prefer to observe rather than participate. When you meet new people, you wait and listen. Your memories live in symbols and emotion, not noise. You feel a kinship with Dreamers, but on your own, slower terms. And when you connect with someone, you want to feel at peace."
+  },
+  {
+    "id": "b214734f-9d23-481b-b8c2-3971a0ae9b9f",
+    "name": "Daniel White",
+    "gender": "non_binary",
+    "age": 34,
+    "location": "Milan",
+    "insights": [
+      "You arrive at a large square. What do you do? Follow the music.",
+      "A host offers you a companion. Who do you pick? A hyper-curious guide asking endless questions.",
+      "Someone invites you to an underground event. How do you respond? Accept immediately.",
+      "You're asked to join a performance. What do you do? Dive in without thinking.",
+      "You’re placed in a room with strangers. What do you do? Start talking and break the ice.",
+      "You’re asked to draw a memory. What do you draw? Draw a person.",
+      "You can join one of three groups. Which do you choose? The Connectors – social hearts, activists.",
+      "When you connect with someone, what do you most want to feel? Inspired."
+    ],
+    "narrative": "You move through life with openness and bold curiosity. When music calls, you follow it. You surround yourself with endlessly inquisitive people. You embrace strange, spontaneous experiences with enthusiasm. You join in without fear, speaking first and sharing deeply. Your memories are shaped by people and human stories. You feel at home among the Connectors—those who lead with empathy. And what you truly seek is to feel inspired by others."
+  },
+  {
+    "id": "14bb77e2-0980-4a3e-9b9d-90a32905e5d1",
+    "name": "Emily Brown",
+    "gender": "non_binary",
+    "age": 56,
+    "location": "Milan",
+    "insights": [
+      "You arrive in a large square. What do you do? Climb a tower to get a better view.",
+      "You choose a companion. Who? A silent artist sketching in the corner.",
+      "You're invited to an underground event. Your response? Politely decline and ask what it’s about first.",
+      "Spontaneous performance — your choice? Join, but only as an observer/supporter.",
+      "In a room of strangers, you… Ask a thought-provoking question.",
+      "You draw a memory. It is… A place.",
+      "Your chosen group? The Builders – thinkers, planners, debaters.",
+      "In connection, you want to feel… Understood."
+    ],
+    "narrative": "You explore with intention and care. You start by looking from above, making sense of what lies ahead. You connect with quiet creatives, and you’re drawn to mystery, but only when it feels safe. You observe before acting and speak only when it matters. Your memories live in meaningful places. You think like a Builder—structured, thoughtful, and precise. And when it comes to connection, you want to feel understood."
+  },
+  {
+    "id": "eb42cc4e-0a6a-4a5b-8c37-4cfad6f2f08f",
+    "name": "Frank Green",
+    "gender": "male",
+    "age": 45,
+    "location": "Milan",
+    "insights": [
+      "You arrive at a large square where a crowd gathers. What do you do? Approach a group chatting calmly.",
+      "A host offers you a companion to explore with. Who do you pick? A grounded local with strong opinions.",
+      "Someone invites you to an underground event. How do you respond? Avoid it — doesn’t feel safe.",
+      "You're asked to join a spontaneous performance. What do you do? Avoid it, not your thing.",
+      "You’re placed in a room with strangers. What do you do? Wait for someone to speak to you.",
+      "You’re asked to draw a memory. What do you draw? Draw a person.",
+      "You can join one of three groups. Which do you choose? The Connectors – social hearts, activists.",
+      "When you connect with someone, what do you most want to feel? At peace."
+    ],
+    "narrative": "You value stability and grounded connection. You join conversations calmly and let others take the lead. You trust steady, opinionated people to help navigate your world. You avoid chaotic situations and prefer comfort over risk. You wait before speaking, letting the space settle. The people in your life define your strongest memories. You resonate with the Connectors—those who build bridges. What matters most to you is finding peace in connection."
+  },
+  {
+    "id": "f89115f7-b946-4c1e-a26c-d772b1383e54",
+    "name": "Grace Taylor",
+    "gender": "female",
+    "age": 31,
+    "location": "Milan",
+    "insights": [
+      "You arrive at a large square. What do you do? Follow the music.",
+      "Your companion? A silent artist sketching in the corner.",
+      "You’re invited to a strange event. You… Accept immediately.",
+      "Spontaneous performance? You… Dive in without thinking.",
+      "Room of strangers — you… Start talking and break the ice.",
+      "You draw… A symbol or abstract shape.",
+      "You join… The Dreamers – idealists, artists, rebels.",
+      "What do you seek in connection? Inspired."
+    ],
+    "narrative": "You follow magic wherever it leads. You walk toward music, into unfamiliar streets, guided by your instincts. Your companion is silent but expressive—just like you. You say yes to the strange and beautiful. You perform without hesitation and open conversations easily. Your memories live in symbols, feelings, and dreams. You belong with the Dreamers. And in every bond, you’re looking to feel inspired."
+  },
+  {
+    "id": "1c4961b6-15b0-4cf0-97ce-312c8b1efb69",
+    "name": "Henry Wilson",
+    "gender": "male",
+    "age": 22,
+    "location": "Milan",
+    "insights": [
+      "You arrive. What do you do? Climb a tower to get a better view.",
+      "Your companion? A hyper-curious guide asking endless questions.",
+      "You’re invited to an event. You… Politely decline and ask what it’s about first.",
+      "Spontaneous performance? You… Join, but only as an observer/supporter.",
+      "Room of strangers — you… Ask a thought-provoking question.",
+      "You draw… A place.",
+      "You join… The Builders – thinkers, planners, debaters.",
+      "Connection brings… Understanding."
+    ],
+    "narrative": "You’re thoughtful, curious, and observant. You begin by getting the lay of the land before jumping in. Your ideal companion is someone who asks deep questions and challenges your thinking. You embrace the unknown, but carefully. You observe before joining. You ask the kind of questions that unlock real conversations. Your memories live in meaningful places. You think like a Builder. Above all, you want to be understood."
+  },
+  {
+    "id": "346b4037-dba2-4cb3-9176-bc445efecb3e",
+    "name": "Ivy Moore",
+    "gender": "female",
+    "age": 34,
+    "location": "Milan",
+    "insights": [
+      "You arrive in the square. What do you do? Approach a group chatting calmly.",
+      "You choose a companion. Who? A silent artist sketching in the corner.",
+      "Underground event invite? You… Avoid it — doesn’t feel safe.",
+      "Spontaneous performance? You… Avoid it, not your thing.",
+      "In a room of strangers… Wait for someone to speak to you.",
+      "You draw… A person.",
+      "You join… The Connectors – social hearts, activists.",
+      "Connection feels best when… At peace."
+    ],
+    "narrative": "You seek gentle connection and emotional safety. You’re drawn to calm conversation and quiet company. You avoid what feels chaotic or unsafe. You prefer to watch, to let others speak first. Your memories are tied to the people who’ve meant something to you. You resonate with the Connectors—those who care, listen, and hold space. What you want most is peace."
+  },
+  {
+    "id": "38a68910-2e0d-4f09-8fc9-25ff0f4a183b",
+    "name": "Jade Thomas",
+    "gender": "female",
+    "age": 28,
+    "location": "Milan",
+    "insights": [
+      "You arrive — what do you do? Follow the music.",
+      "Your companion? A hyper-curious guide asking endless questions.",
+      "Event invitation? Accept immediately.",
+      "Performance? Dive in without thinking.",
+      "Strangers? Start talking and break the ice.",
+      "Draw? A symbol or abstract shape.",
+      "Join? The Dreamers – idealists, artists, rebels.",
+      "Connect to feel… Inspired."
+    ],
+    "narrative": "You follow rhythm and intuition. Music draws you forward. You travel with curiosity at your side and say yes to the unexpected. You express yourself boldly and make connection quickly. You remember life as energy and shape. You think like a Dreamer. And what you need in others is a sense of shared inspiration."
+  }
 ]

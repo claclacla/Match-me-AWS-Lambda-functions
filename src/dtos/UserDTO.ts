@@ -15,5 +15,6 @@ export interface UserDTO {
     gender: UserGender;
     location: string;
     age: number;
-    bio: string;
+    insights: string[];
+    narrative: string;
 }

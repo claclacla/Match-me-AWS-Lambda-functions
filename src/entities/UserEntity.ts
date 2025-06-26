@@ -7,6 +7,7 @@ export interface UserEntity {
         gender: string,
         location: string,
         age: number,
-        bio: string
+        insights: string[],
+        narrative: string
     }
 }

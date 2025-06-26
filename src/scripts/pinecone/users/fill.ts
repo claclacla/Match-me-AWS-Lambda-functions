@@ -53,7 +53,8 @@ async function fill() {
                     gender: user.gender,
                     location: user.location,
                     age: user.age,
-                    bio: user.bio,
+                    insights: user.insights,
+                    narrative: user.narrative
                 },
             };
 

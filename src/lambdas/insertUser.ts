@@ -50,7 +50,8 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
                 gender: userDTO.gender,
                 location: userDTO.location,
                 age: userDTO.age,
-                bio: userDTO.bio
+                insights: userDTO.insights,
+                narrative: userDTO.narrative
             }
         }
 

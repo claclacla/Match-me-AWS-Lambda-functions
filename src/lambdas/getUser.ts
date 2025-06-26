@@ -56,7 +56,8 @@ export const handler = async (event: any) => {
             gender: match.metadata.gender as UserGender,
             location: match.metadata.location as string,
             age: match.metadata.age as number,
-            bio: match.metadata.bio as string
+            insights: match.metadata.insights as string[],
+            narrative: match.metadata.narrative as string
         }
 
         console.log("UserDTO: " + JSON.stringify(userDTO));
