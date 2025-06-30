@@ -9,7 +9,7 @@ import { UserEntity } from '../../../entities/UserEntity';
 
 import { connect as openAIConnect } from '../../../openai/connect';
 import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
-import { generateUserCreationPrompt } from '../../../openai/generateUserCreationPrompt';
+import { generateNarrative } from '../../../openai/generateNarrative';
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
 import { upsert } from '../../../repositories/pinecone/upsert';
@@ -37,10 +37,12 @@ async function fill() {
         const vectorsToUpsert: UserEntity[] = [];
 
         for (const user of users) {
+            const narrative: string = await generateNarrative({ openai, insights: user.insights })
+
             user.id = uuidv4();
             const embedding = await generateTextEmbedding({
                 openai,
-                text: generateUserCreationPrompt(user),
+                text: narrative,
                 dimension: DATA.EMBEDDING_DIMENSION
             });
 
@@ -54,7 +56,7 @@ async function fill() {
                     location: user.location,
                     age: user.age,
                     insights: user.insights,
-                    narrative: user.narrative
+                    narrative: narrative
                 },
             };
 

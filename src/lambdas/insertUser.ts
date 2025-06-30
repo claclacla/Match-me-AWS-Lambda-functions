@@ -7,7 +7,7 @@ import { upsert } from '../repositories/pinecone/upsert';
 
 import { connect as openAIConnect } from '../openai/connect';
 import { generateTextEmbedding } from '../openai/generateTextEmbedding';
-import { generateUserCreationPrompt } from '../openai/generateUserCreationPrompt';
+import { generateNarrative } from '../openai/generateNarrative';
 
 import { UserEntity } from "src/entities/UserEntity";
 import { UserDTO } from 'src/dtos/UserDTO';
@@ -29,15 +29,30 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
     try {
         console.log(`\nInserting new user: "${userDTO.name}"`);
 
-        // 1. Generate embedding from the user's bio
+/*
+You are a personality analyst trained to interpret user narratives and behavioral insights for a friend-matching app.
+
+You will receive a collection of structured inputs that may include question-and-answer pairs, freeform reflections, user behavior summaries, or personality tags.
+
+Your task is to write a short, engaging, third-person description of the user, focusing on how they might relate to others. Use the information provided to infer values, social tendencies, and emotional tone.
+
+Do not list or reference the original prompts or questions. Instead, synthesize the information into a warm, human description suitable for matching with others in a social context.
+*/
+
+        // 1. Generate the user's narrative
+
+        const narrative: string = await generateNarrative({ openai, insights: userDTO.insights });
+        console.log(narrative);
+
+        // 2. Generate embedding from the user's narrative
 
         const embedding = await generateTextEmbedding({ 
             openai, 
-            text: generateUserCreationPrompt(userDTO), 
+            text: narrative, 
             dimension: DATA.EMBEDDING_DIMENSION 
         });
 
-        // 2. Create the entity and the user creation prompt
+        // 3. Create the entity and the user creation prompt
 
         // TO DO: Add a parser from UserDTO to UserEntity
 
@@ -51,11 +66,11 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
                 location: userDTO.location,
                 age: userDTO.age,
                 insights: userDTO.insights,
-                narrative: userDTO.narrative
+                narrative
             }
         }
 
-        // 3. Upsert the vector into Pinecone
+        // 4. Upsert the vector into Pinecone
 
         await upsert({
             index: usersIndex,
