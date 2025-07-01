@@ -1,5 +1,6 @@
 import * as dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
+import { Pinecone } from '@pinecone-database/pinecone';
 
 import { DATA, PINECONE } from "../../../config/config.json";
 import usersDataset from '../../../../assets/users.json';
@@ -12,7 +13,7 @@ import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
 import { generateNarrative } from '../../../openai/generateNarrative';
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
-import { upsert } from '../../../repositories/pinecone/upsert';
+import { upsert as pineconeUsersUpsert } from "../../../repositories/pinecone/users";
 
 dotenv.config();
 
@@ -25,8 +26,7 @@ if (PINECONE_KEY === undefined || OPENAI_API_KEY === undefined) {
 
 const users: UserDTO[] = usersDataset as UserDTO[];
 
-const pc = pineconeConnect({ key: PINECONE_KEY });
-const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
+const pineconeClient: Pinecone = pineconeConnect({ key: PINECONE_KEY });
 
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
@@ -34,7 +34,7 @@ async function fill() {
     try {
         console.log(`Creation of the index upsert "${PINECONE.INDEXES.USERS}"...`);
 
-        const vectorsToUpsert: UserEntity[] = [];
+        const usersEntities: UserEntity[] = [];
 
         for (const user of users) {
             const narrative: string = await generateNarrative({ openai, insights: user.insights })
@@ -60,12 +60,12 @@ async function fill() {
                 },
             };
 
-            vectorsToUpsert.push(userEntity);
+            usersEntities.push(userEntity);
         }
 
-        console.log(`${vectorsToUpsert.length} vectors creation in the index "${PINECONE.INDEXES.USERS}"...`);
+        console.log(`${usersEntities.length} vectors creation in the index "${PINECONE.INDEXES.USERS}"...`);
 
-        await upsert({ index: usersIndex, vectors: vectorsToUpsert });
+        await pineconeUsersUpsert({ pineconeClient, users: usersEntities });
 
         console.log("Vectors created!");
 

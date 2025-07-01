@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-import { v4 as uuidv4 } from 'uuid';
+import { Pinecone } from '@pinecone-database/pinecone';
 
 import { DATA, PINECONE } from "../../../config/config.json";
 
@@ -11,7 +11,7 @@ import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
 import { generateNarrative } from '../../../openai/generateNarrative';
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
-import { upsert } from '../../../repositories/pinecone/upsert';
+import { upsert as pineconeUsersUpsert } from "../../../repositories/pinecone/users";
 
 dotenv.config();
 
@@ -41,9 +41,7 @@ const userDTO: UserDTO = {
     "narrative": ""
 };
 
-const pc = pineconeConnect({ key: PINECONE_KEY });
-const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
-
+const pineconeClient: Pinecone = pineconeConnect({ key: PINECONE_KEY });
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
 async function insert({ user }: { user: UserDTO }) {
@@ -71,7 +69,7 @@ async function insert({ user }: { user: UserDTO }) {
 
     console.log(`Vectors creation in the index "${PINECONE.INDEXES.USERS}"...`);
 
-    await upsert({ index: usersIndex, vectors: [userEntity] });
+    await pineconeUsersUpsert({ pineconeClient, users: [userEntity] });
 
     console.log("Vector created!");
 }

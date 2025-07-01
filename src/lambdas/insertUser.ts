@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
+import { Pinecone } from '@pinecone-database/pinecone';
 
 import { DATA, PINECONE } from "../config/config.json";
 
 import { connect as pineconeConnect } from '../repositories/pinecone/connect';
-import { upsert } from '../repositories/pinecone/upsert';
+import { upsert as pineconeUsersUpsert } from "../repositories/pinecone/users";
 
 import { connect as openAIConnect } from '../openai/connect';
 import { generateTextEmbedding } from '../openai/generateTextEmbedding';
@@ -20,8 +21,7 @@ if (!PINECONE_KEY || !OPENAI_API_KEY) {
     throw new Error("Missing API keys configuration.");
 }
 
-const pc = pineconeConnect({ key: PINECONE_KEY });
-const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
+const pineconeClient: Pinecone = pineconeConnect({ key: PINECONE_KEY });
 
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
@@ -70,12 +70,13 @@ Do not list or reference the original prompts or questions. Instead, synthesize 
             }
         }
 
+        if(userDTO.match?.id) {
+            userEntity.metadata.matchId = userDTO.match.id;
+        }
+
         // 4. Upsert the vector into Pinecone
 
-        await upsert({
-            index: usersIndex,
-            vectors: [userEntity],
-        });
+        await pineconeUsersUpsert({ pineconeClient, users: [userEntity] });
 
         console.log(`Successfully inserted user ${userEntity.metadata.name} into Pinecone.`);
 

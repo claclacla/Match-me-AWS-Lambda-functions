@@ -17,4 +17,7 @@ export interface UserDTO {
     age: number;
     insights: string[];
     narrative: string;
+    match?: {
+        id: string;
+    }
 }

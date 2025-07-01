@@ -8,6 +8,7 @@ export interface UserEntity {
         location: string,
         age: number,
         insights: string[],
-        narrative: string
+        narrative: string,
+        matchId?: string
     }
 }
