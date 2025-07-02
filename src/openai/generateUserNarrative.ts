@@ -10,7 +10,7 @@ Don’t repeat the questions. Instead, infer values, social tendencies, and emot
 Keep the tone friendly, human, and suitable for social matching.
 `;
 
-export async function generateNarrative({ openai, insights }: { openai: any, insights: string[] }): Promise<string> {
+export async function generateUserNarrative({ openai, insights }: { openai: any, insights: string[] }): Promise<string> {
     const userInsights: string = reduceStrings({ strings: insights });
 
     const response = await openai.chat.completions.create({

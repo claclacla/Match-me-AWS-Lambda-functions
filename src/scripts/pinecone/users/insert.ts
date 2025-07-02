@@ -8,7 +8,7 @@ import { UserEntity } from '../../../entities/UserEntity';
 
 import { connect as openAIConnect } from '../../../openai/connect';
 import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
-import { generateNarrative } from '../../../openai/generateNarrative';
+import { generateUserNarrative } from '../../../openai/generateUserNarrative';
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
 import { upsert as pineconeUsersUpsert } from "../../../repositories/pinecone/users";
@@ -45,7 +45,7 @@ const pineconeClient: Pinecone = pineconeConnect({ key: PINECONE_KEY });
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
 async function insert({ user }: { user: UserDTO }) {
-    const narrative: string = await generateNarrative({ openai, insights: user.insights });
+    const narrative: string = await generateUserNarrative({ openai, insights: user.insights });
 
     const embedding = await generateTextEmbedding({
         openai,
