@@ -4,12 +4,11 @@
         "module": "commonjs",
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "rootDir": "src",
-        "outDir": "./build",
-        "baseUrl": "./",
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "outDir": "build", // <== This sends compiled files to ./build
+        "rootDir": "src" // <== This tells TypeScript where the input files are
     },
     "include": [
         "src/**/*"

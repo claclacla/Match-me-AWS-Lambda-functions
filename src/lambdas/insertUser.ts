@@ -10,8 +10,8 @@ import { connect as openAIConnect } from '../openai/connect';
 import { generateTextEmbedding } from '../openai/generateTextEmbedding';
 import { generateUserNarrative } from '../openai/generateUserNarrative';
 
-import { UserEntity } from "src/entities/UserEntity";
-import { UserDTO } from 'src/dtos/UserDTO';
+import { UserEntity } from '../entities/UserEntity';
+import { UserDTO } from '../dtos/UserDTO';
 
 const PINECONE_KEY = process.env.PINECONE_KEY;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;

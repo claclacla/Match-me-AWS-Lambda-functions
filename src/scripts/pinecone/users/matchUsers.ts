@@ -1,11 +1,14 @@
 import * as dotenv from 'dotenv';
-import { Pinecone, RecordMetadata, ScoredPineconeRecord } from '@pinecone-database/pinecone';
+import { RecordMetadata, ScoredPineconeRecord } from '@pinecone-database/pinecone';
 
 import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
 import { query as pineconeUsersQuery } from "../../../repositories/pinecone/users";
 
 import { UserEntity } from '../../../entities/UserEntity';
 import { mapPineconeUserRecordToUserEntity } from '../../../mappers/mapPineconeUserRecordToUserEntity';
+
+import { connect as openAIConnect } from '../../../openai/connect';
+import { generateIdealMatchProfile } from '../../../openai/generateIdealMatchProfile';
 
 dotenv.config();
 
@@ -17,6 +20,7 @@ if (PINECONE_KEY === undefined || OPENAI_API_KEY === undefined) {
 }
 
 const pineconeClient = pineconeConnect({ key: PINECONE_KEY });
+const openai = openAIConnect({ key: OPENAI_API_KEY });
 
 async function matchUsers() {
 
@@ -41,7 +45,14 @@ async function matchUsers() {
 
     console.log(userEntities);
 
-    
+    // 2. Generate ideal match profile
+
+    for (const userEntity of userEntities) {
+        console.log("\nGenerating ideal match for:", userEntity.metadata.name);
+        console.log("Narrative:", userEntity.metadata.narrative);
+
+        const matchDescription: string = await generateIdealMatchProfile({ openai, narrative: userEntity.metadata.narrative });
+    }
 }
 
 matchUsers();
