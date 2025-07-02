@@ -19,7 +19,7 @@ export async function generateIdealMatchProfile({ openai, narrative }: { openai:
     });
 
     const matchDescription = response.choices[0].message.content;
-    console.log("Generated ideal match description:\n", matchDescription);
+    console.log("\nGenerated ideal match description:\n", matchDescription);
 
     return matchDescription;
 }

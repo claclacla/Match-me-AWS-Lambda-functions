@@ -50,7 +50,7 @@ async function fill() {
                 id: user.id,
                 values: embedding,
                 metadata: {
-                    ownerId: "",
+                    ownerId: uuidv4(),
                     name: user.name,
                     gender: user.gender,
                     location: user.location,

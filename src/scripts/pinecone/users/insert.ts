@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import { v4 as uuidv4 } from 'uuid';
 import { Pinecone } from '@pinecone-database/pinecone';
 
 import { DATA, PINECONE } from "../../../config/config.json";
@@ -57,7 +58,7 @@ async function insert({ user }: { user: UserDTO }) {
         id: user.id,
         values: embedding,
         metadata: {
-            ownerId: "",
+            ownerId: uuidv4(),
             name: user.name,
             gender: user.gender,
             location: user.location,

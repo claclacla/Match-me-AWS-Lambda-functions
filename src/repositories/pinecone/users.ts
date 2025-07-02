@@ -8,14 +8,23 @@ function getUsersIndex({ pineconeClient }: { pineconeClient: Pinecone }) {
     return pineconeClient.Index(PINECONE.INDEXES.USERS);
 }
 
-export async function query({ pineconeClient, limit = 1, filter }: { pineconeClient: Pinecone, limit?: number, filter: {} }) {
+const EMPTY_VECTOR: number[] = Array(1536).fill(0);
+
+interface QueryProps { 
+    pineconeClient: Pinecone, 
+    limit?: number, 
+    filter?: {}, 
+    vector?: number[] 
+}
+
+export async function query({ pineconeClient, limit = 1, filter = {}, vector = EMPTY_VECTOR }: QueryProps) {
     const usersIndex = getUsersIndex({ pineconeClient });
 
     try {
         return await usersIndex.query({
             topK: limit,
             includeMetadata: true,
-            vector: Array(1536).fill(0), 
+            vector,
             filter
         });
     }
