@@ -1,3 +1,4 @@
+/*
 import * as dotenv from 'dotenv';
 
 import { PINECONE } from "../../../config/config.json";
@@ -87,3 +88,4 @@ async function findSimilarUsersById(targetId: string, topK: number = 2) {
 (async () => {
     await findSimilarUsersById('user_002', 2);
 })();
+*/

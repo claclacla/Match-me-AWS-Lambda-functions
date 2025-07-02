@@ -4,12 +4,28 @@ import { UserEntity } from "../../entities/UserEntity";
 
 import { PINECONE } from "../../config/config.json";
 
-function getUserIndex({ pineconeClient }: { pineconeClient: Pinecone }) {
+function getUsersIndex({ pineconeClient }: { pineconeClient: Pinecone }) {
     return pineconeClient.Index(PINECONE.INDEXES.USERS);
 }
 
+export async function query({ pineconeClient, limit = 1, filter }: { pineconeClient: Pinecone, limit?: number, filter: {} }) {
+    const usersIndex = getUsersIndex({ pineconeClient });
+
+    try {
+        return await usersIndex.query({
+            topK: limit,
+            includeMetadata: true,
+            vector: Array(1536).fill(0), 
+            filter
+        });
+    }
+    catch (error: any) {
+        console.error("Query error:", error.message || error);
+    }
+}
+
 export async function upsert({ pineconeClient, users }: { pineconeClient: Pinecone, users: UserEntity[] }) {
-    const usersIndex = getUserIndex({ pineconeClient });
+    const usersIndex = getUsersIndex({ pineconeClient });
 
     try {
         await usersIndex.upsert(users);

@@ -9,6 +9,6 @@ export interface UserEntity {
         age: number,
         insights: string[],
         narrative: string,
-        matchId?: string
+        matchId: string
     }
 }

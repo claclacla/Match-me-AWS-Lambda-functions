@@ -63,7 +63,8 @@ async function insert({ user }: { user: UserDTO }) {
             location: user.location,
             age: user.age,
             insights: user.insights,
-            narrative: user.narrative
+            narrative: narrative,
+            matchId: ""
         },
     };
 

@@ -56,7 +56,8 @@ async function fill() {
                     location: user.location,
                     age: user.age,
                     insights: user.insights,
-                    narrative: narrative
+                    narrative: narrative,
+                    matchId: ""
                 },
             };
 

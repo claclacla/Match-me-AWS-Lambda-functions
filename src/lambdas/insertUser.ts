@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { Pinecone } from '@pinecone-database/pinecone';
 
-import { DATA, PINECONE } from "../config/config.json";
+import { DATA } from "../config/config.json";
 
 import { connect as pineconeConnect } from '../repositories/pinecone/connect';
 import { upsert as pineconeUsersUpsert } from "../repositories/pinecone/users";
@@ -66,7 +66,8 @@ Do not list or reference the original prompts or questions. Instead, synthesize 
                 location: userDTO.location,
                 age: userDTO.age,
                 insights: userDTO.insights,
-                narrative
+                narrative,
+                matchId: ""
             }
         }
 

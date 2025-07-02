@@ -17,6 +17,7 @@
     "fill-pinecone-users-index": "node build/scripts/pinecone/users/fill.js",
     "insert-pinecone-users-index": "node build/scripts/pinecone/users/insert.js",
     "find-similar-users-by-id": "node build/scripts/pinecone/users/findSimilarUsersById.js",
+    "match-users": "node build/scripts/pinecone/users/matchUsers.js",
     "dev": "npm run build && npm run start"
   }
 }

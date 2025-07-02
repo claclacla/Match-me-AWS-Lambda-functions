@@ -1,7 +1,7 @@
-import { PINECONE } from "../config/config.json";
 import { connect as pineconeConnect } from '../repositories/pinecone/connect';
+import { query as pineconeUsersQuery } from "../repositories/pinecone/users";
 
-import { UserDTO, UserGender } from "src/dtos/UserDTO";
+import { UserDTO, UserGender } from "../dtos/UserDTO";
 
 const PINECONE_KEY = process.env.PINECONE_KEY;
 
@@ -10,8 +10,7 @@ if (!PINECONE_KEY) {
     throw new Error("Missing PINECONE_KEY");
 }
 
-const pc = pineconeConnect({ key: PINECONE_KEY });
-const usersIndex = pc.Index(PINECONE.INDEXES.USERS);
+const pineconeClient = pineconeConnect({ key: PINECONE_KEY });
 
 export const handler = async (event: any) => {
     try {
@@ -29,16 +28,14 @@ export const handler = async (event: any) => {
         }
 
         // Search by metadata.ownerId
-        const queryResult = await usersIndex.query({
-            topK: 1,
-            includeMetadata: true,
-            vector: Array(1536).fill(0), // dummy zero vector to force metadata-only filter
-            filter: {
+
+        const queryResult = await pineconeUsersQuery({
+            pineconeClient, filter: {
                 "ownerId": { "$eq": authenticatedUserId }
             }
         });
 
-        const match = queryResult.matches?.[0];
+        const match = queryResult?.matches?.[0];
 
         if (match === undefined || match.metadata === undefined) {
             return {

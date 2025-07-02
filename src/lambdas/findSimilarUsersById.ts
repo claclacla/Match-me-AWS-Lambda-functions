@@ -1,3 +1,4 @@
+/*
 import { PINECONE } from "../config/config.json";
 
 import { connect as pineconeConnect } from '../repositories/pinecone/connect';
@@ -42,13 +43,13 @@ async function findSimilarUsersById({ targetId, topK } : { targetId: string, top
         // TO DO: add the authenticatedUserId metadata to the Pinecone data and uncomment the following lines
         // AND the "filter" parameter in the query below
 
-        /*
+        *
         if (targetVector.metadata?.ownerId !== authenticatedUserId) {
             console.warn(`Unauthorized access: User ${authenticatedUserId} attempted to access vector ${targetId} owned by ${targetVector.metadata?.ownerId}.`);
             // You might want to throw an error or return a specific response here depending on security policy
             throw new Error("Unauthorized: Access to target vector denied.");
         }
-        */
+        *
 
         const queryVector = targetVector.values;
 
@@ -168,3 +169,4 @@ export const handler = async (event: any) => {
         };
     }
 };
+*/

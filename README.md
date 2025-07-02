@@ -65,6 +65,15 @@ npm run insert-pinecone-users-index
 
 ```
 
+
+- Match users
+
+```bash
+
+npm run match-users
+
+```
+
 --------------------------------------------------------------------------------
 
 ## Deploy
