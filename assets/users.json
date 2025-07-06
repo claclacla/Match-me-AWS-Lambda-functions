@@ -1,182 +1,182 @@
 [
-    {
-        "id": "ab3c9e1a-347e-4459-85ea-2e99b6e340d4",
-        "name": "Alex Johnson",
-        "gender": "male",
-        "age": 45,
-        "location": "Milan",
-        "insights": [
-            "You arrive at a large square where a crowd gathers. Music echoes from the side streets. What do you do? Climb a tower to get a better view.",
-            "A host offers you a companion to explore with. Who do you pick? A grounded local with strong opinions.",
-            "Someone invites you to an underground event. It’s unstructured, strange, and secret. How do you respond? Politely decline and ask what it’s about first.",
-            "You're asked to join a spontaneous performance. What do you do? Join, but only as an observer/supporter.",
-            "You’re placed in a room with strangers for 5 minutes. What do you do? Ask a thought-provoking question.",
-            "You’re asked to draw a memory that defines you. What do you draw? Draw a place.",
-            "You can join one of three groups in the city. Which do you choose? The Builders – thinkers, planners, debaters.",
-            "When you connect with someone, what do you most want to feel? Understood."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "135e7f70-1b25-4b41-a4d6-18d4909437d4",
-        "name": "Ben Davis",
-        "gender": "male",
-        "age": 19,
-        "location": "Milan",
-        "insights": [
-            "You arrive at a large square where a crowd gathers. Music echoes from the side streets. What do you do? Follow the music.",
-            "A host offers you a companion to explore with. Who do you pick? A hyper-curious guide asking endless questions.",
-            "Someone invites you to an underground event. How do you respond? Accept immediately.",
-            "You're asked to join a spontaneous performance. What do you do? Dive in without thinking.",
-            "You’re placed in a room with strangers. What do you do? Start talking and break the ice.",
-            "You’re asked to draw a memory that defines you. What do you draw? Draw a symbol or abstract shape.",
-            "You can join one of three groups. Which do you choose? The Dreamers – idealists, artists, rebels.",
-            "When you connect with someone, what do you most want to feel? Inspired."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "c1bc0e7a-47da-49b5-80cf-9b8379d9f27a",
-        "name": "Chloe Miller",
-        "gender": "female",
-        "age": 62,
-        "location": "Milan",
-        "insights": [
-            "You arrive at a large square where a crowd gathers. What do you do? Approach a group chatting calmly.",
-            "A host offers you a companion to explore with. Who do you pick? A silent artist sketching in the corner.",
-            "Someone invites you to an underground event. How do you respond? Avoid it — doesn’t feel safe.",
-            "You're asked to join a spontaneous performance. What do you do? Avoid it, not your thing.",
-            "You’re placed in a room with strangers. What do you do? Wait for someone to speak to you.",
-            "You’re asked to draw a memory. What do you draw? Draw a symbol or abstract shape.",
-            "You can join one of three groups. Which do you choose? The Dreamers – idealists, artists, rebels.",
-            "When you connect with someone, what do you most want to feel? At peace."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "b214734f-9d23-481b-b8c2-3971a0ae9b9f",
-        "name": "Daniel White",
-        "gender": "non_binary",
-        "age": 34,
-        "location": "Milan",
-        "insights": [
-            "You arrive at a large square. What do you do? Follow the music.",
-            "A host offers you a companion. Who do you pick? A hyper-curious guide asking endless questions.",
-            "Someone invites you to an underground event. How do you respond? Accept immediately.",
-            "You're asked to join a performance. What do you do? Dive in without thinking.",
-            "You’re placed in a room with strangers. What do you do? Start talking and break the ice.",
-            "You’re asked to draw a memory. What do you draw? Draw a person.",
-            "You can join one of three groups. Which do you choose? The Connectors – social hearts, activists.",
-            "When you connect with someone, what do you most want to feel? Inspired."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "14bb77e2-0980-4a3e-9b9d-90a32905e5d1",
-        "name": "Emily Brown",
-        "gender": "non_binary",
-        "age": 56,
-        "location": "Milan",
-        "insights": [
-            "You arrive in a large square. What do you do? Climb a tower to get a better view.",
-            "You choose a companion. Who? A silent artist sketching in the corner.",
-            "You're invited to an underground event. Your response? Politely decline and ask what it’s about first.",
-            "Spontaneous performance — your choice? Join, but only as an observer/supporter.",
-            "In a room of strangers, you… Ask a thought-provoking question.",
-            "You draw a memory. It is… A place.",
-            "Your chosen group? The Builders – thinkers, planners, debaters.",
-            "In connection, you want to feel… Understood."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "eb42cc4e-0a6a-4a5b-8c37-4cfad6f2f08f",
-        "name": "Frank Green",
-        "gender": "male",
-        "age": 45,
-        "location": "Milan",
-        "insights": [
-            "You arrive at a large square where a crowd gathers. What do you do? Approach a group chatting calmly.",
-            "A host offers you a companion to explore with. Who do you pick? A grounded local with strong opinions.",
-            "Someone invites you to an underground event. How do you respond? Avoid it — doesn’t feel safe.",
-            "You're asked to join a spontaneous performance. What do you do? Avoid it, not your thing.",
-            "You’re placed in a room with strangers. What do you do? Wait for someone to speak to you.",
-            "You’re asked to draw a memory. What do you draw? Draw a person.",
-            "You can join one of three groups. Which do you choose? The Connectors – social hearts, activists.",
-            "When you connect with someone, what do you most want to feel? At peace."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "f89115f7-b946-4c1e-a26c-d772b1383e54",
-        "name": "Grace Taylor",
-        "gender": "female",
-        "age": 31,
-        "location": "Milan",
-        "insights": [
-            "You arrive at a large square. What do you do? Follow the music.",
-            "Your companion? A silent artist sketching in the corner.",
-            "You’re invited to a strange event. You… Accept immediately.",
-            "Spontaneous performance? You… Dive in without thinking.",
-            "Room of strangers — you… Start talking and break the ice.",
-            "You draw… A symbol or abstract shape.",
-            "You join… The Dreamers – idealists, artists, rebels.",
-            "What do you seek in connection? Inspired."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "1c4961b6-15b0-4cf0-97ce-312c8b1efb69",
-        "name": "Henry Wilson",
-        "gender": "male",
-        "age": 22,
-        "location": "Milan",
-        "insights": [
-            "You arrive. What do you do? Climb a tower to get a better view.",
-            "Your companion? A hyper-curious guide asking endless questions.",
-            "You’re invited to an event. You… Politely decline and ask what it’s about first.",
-            "Spontaneous performance? You… Join, but only as an observer/supporter.",
-            "Room of strangers — you… Ask a thought-provoking question.",
-            "You draw… A place.",
-            "You join… The Builders – thinkers, planners, debaters.",
-            "Connection brings… Understanding."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "346b4037-dba2-4cb3-9176-bc445efecb3e",
-        "name": "Ivy Moore",
-        "gender": "female",
-        "age": 34,
-        "location": "Milan",
-        "insights": [
-            "You arrive in the square. What do you do? Approach a group chatting calmly.",
-            "You choose a companion. Who? A silent artist sketching in the corner.",
-            "Underground event invite? You… Avoid it — doesn’t feel safe.",
-            "Spontaneous performance? You… Avoid it, not your thing.",
-            "In a room of strangers… Wait for someone to speak to you.",
-            "You draw… A person.",
-            "You join… The Connectors – social hearts, activists.",
-            "Connection feels best when… At peace."
-        ],
-        "narrative": ""
-    },
-    {
-        "id": "38a68910-2e0d-4f09-8fc9-25ff0f4a183b",
-        "name": "Jade Thomas",
-        "gender": "female",
-        "age": 28,
-        "location": "Milan",
-        "insights": [
-            "You arrive — what do you do? Follow the music.",
-            "Your companion? A hyper-curious guide asking endless questions.",
-            "Event invitation? Accept immediately.",
-            "Performance? Dive in without thinking.",
-            "Strangers? Start talking and break the ice.",
-            "Draw? A symbol or abstract shape.",
-            "Join? The Dreamers – idealists, artists, rebels.",
-            "Connect to feel… Inspired."
-        ],
-        "narrative": ""
-    }
+  {
+    "id": "e01a9a83-6d78-41dc-a4b9-1fe1ea327b01",
+    "name": "Luca Moretti",
+    "gender": "male",
+    "yearOfBirth": 1994,
+    "location": "Naples",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m a planner — I help organize the chaos.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Start a practical discussion on plan B.",
+      "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Slightly off, but I’ll catch up fast.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I take a side and explain why.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Invite them in with an open question.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Suggest we pause and sync up.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "c1fcb9ae-3d4e-40a5-a9db-d89a10e4b1b2",
+    "name": "Giulia Conti",
+    "gender": "female",
+    "yearOfBirth": 1998,
+    "location": "Florence",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt — tell me what’s needed, I’ll jump in.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
+      "One member dominates the group talk, cutting others off. What do you do? Stay out — it’s not your fight.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Embarrassed — I try to quietly blend in.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I stay neutral and observe.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Let them be — silence can be powerful too.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Back someone’s idea and help them push it through.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… Hard to say — I’m still figuring it out.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Watch how it plays out — dynamics reveal truth.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Not really — I prefer to move on."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "f3cbd135-b310-48f3-8c9a-207cb0663903",
+    "name": "Alessandro Bruno",
+    "gender": "male",
+    "yearOfBirth": 1990,
+    "location": "Turin",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Let others talk while you reflect quietly.",
+      "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Unbothered — I’ll jump in when I’m ready.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I take a side and explain why.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Keep it flowing — maybe they’ll chime in later.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Focus on your own angle and share later.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… It was fine — we worked, not sure we clicked.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Keep things moving — it’ll sort itself.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Maybe — depends on how things evolve."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "a3c88276-91f6-4a7c-9c4e-d03b5f9d3d0b",
+    "name": "Chiara Bellini",
+    "gender": "female",
+    "yearOfBirth": 1995,
+    "location": "Bologna",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m a planner — I help organize the chaos.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Start a practical discussion on plan B.",
+      "One member dominates the group talk, cutting others off. What do you do? Support quieter members by amplifying them.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Slightly off, but I’ll catch up fast.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I listen, then suggest a compromise.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Invite them in with an open question.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Suggest we pause and sync up.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "dd21b8c3-0a10-44c2-9837-c48a16d6b6d2",
+    "name": "Marco Ricci",
+    "gender": "male",
+    "yearOfBirth": 1997,
+    "location": "Rome",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt — tell me what’s needed, I’ll jump in.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
+      "One member dominates the group talk, cutting others off. What do you do? Stay out — it’s not your fight.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Unbothered — I’ll jump in when I’m ready.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I listen, then suggest a compromise.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Keep it flowing — maybe they’ll chime in later.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Focus on your own angle and share later.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… It was fine — we worked, not sure we clicked.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Keep things moving — it’ll sort itself.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "ba4c3db3-7a2f-4a42-b32c-bd3fcbf6f4d1",
+    "name": "Federica Neri",
+    "gender": "female",
+    "yearOfBirth": 1993,
+    "location": "Venice",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
+      "One member dominates the group talk, cutting others off. What do you do? Support quieter members by amplifying them.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Embarrassed — I try to quietly blend in.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I take a side and explain why.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Invite them in with an open question.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Suggest we pause and sync up.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "b7f7a5de-1c54-4d79-9123-78f1a0b3f8e7",
+    "name": "Simone Gallo",
+    "gender": "male",
+    "yearOfBirth": 1992,
+    "location": "Genoa",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m a planner — I help organize the chaos.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Let others talk while you reflect quietly.",
+      "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Unbothered — I’ll jump in when I’m ready.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I stay neutral and observe.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Let them be — silence can be powerful too.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Suggest we pause and sync up.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "7b19f3c2-e7b4-4f2e-9e89-c4d0934a0c59",
+    "name": "Martina Rossi",
+    "gender": "female",
+    "yearOfBirth": 1999,
+    "location": "Palermo",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt — tell me what’s needed, I’ll jump in.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Start a practical discussion on plan B.",
+      "One member dominates the group talk, cutting others off. What do you do? Support quieter members by amplifying them.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Slightly off, but I’ll catch up fast.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I listen, then suggest a compromise.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Invite them in with an open question.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Back someone’s idea and help them push it through.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  },
+  {
+    "id": "8e5dcd7a-635b-4b03-8892-63f1a774c3a1",
+    "name": "Andrea Vitale",
+    "gender": "male",
+    "yearOfBirth": 1989,
+    "location": "Verona",
+    "insights": [
+      "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
+      "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
+      "One member dominates the group talk, cutting others off. What do you do? Stay out — it’s not your fight.",
+      "You arrive late to the group meetup. They’ve started without you. What do you feel? Embarrassed — I try to quietly blend in.",
+      "Your group must choose between two activities. Opinions are split. What’s your role? I listen, then suggest a compromise.",
+      "One person hasn’t spoken much. You’re in a circle about to share ideas. What do you do? Let them be — silence can be powerful too.",
+      "The group must solve a timed puzzle. Everyone’s thinking differently. What’s your instinct? Suggest we pause and sync up.",
+      "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
+      "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
+      "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
+    ],
+    "groupBehavior": ""
+  }
 ]
