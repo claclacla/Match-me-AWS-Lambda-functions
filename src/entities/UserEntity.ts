@@ -1,14 +1,15 @@
+import { UserGender } from "../dtos/UserDTO";
+
 export interface UserEntity {
     id: string,
-    values: number[],
-    metadata: {
-        ownerId: string,
-        name: string,
-        gender: string,
-        location: string,
-        age: number,
-        insights: string[],
-        narrative: string,
-        matchId: string
+    ownerId: string,
+    name: string,
+    gender: UserGender,
+    location: string,
+    yearOfBirth: number,
+    insights: string[],
+    groupBehavior: string,
+    match?: {
+        id: string;
     }
 }

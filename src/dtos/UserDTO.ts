@@ -14,9 +14,9 @@ export interface UserDTO {
     name: string;
     gender: UserGender;
     location: string;
-    age: number;
+    yearOfBirth: number;
     insights: string[];
-    narrative: string;
+    groupBehavior: string;
     match?: {
         id: string;
     }

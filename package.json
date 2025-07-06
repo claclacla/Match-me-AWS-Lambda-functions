@@ -1,9 +1,12 @@
 {
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.840.0",
+    "@aws-sdk/lib-dynamodb": "^3.840.0",
+    "@aws-sdk/util-dynamodb": "^3.840.0",
     "@pinecone-database/pinecone": "^6.0.1",
     "@types/dotenv": "^6.1.1",
     "@types/uuid": "^10.0.0",
-    "dotenv": "^16.5.0",
+    "dotenv": "^16.6.1",
     "openai": "^5.0.1",
     "typescript": "^5.8.3",
     "uuid": "^11.1.0"
@@ -13,11 +16,9 @@
   },
   "scripts": {
     "build": "npx tsc",
-    "create-pinecone-users-index": "node build/scripts/pinecone/users/create.js",
-    "fill-pinecone-users-index": "node build/scripts/pinecone/users/fill.js",
-    "insert-pinecone-users-index": "node build/scripts/pinecone/users/insert.js",
-    "find-similar-users-by-id": "node build/scripts/pinecone/users/findSimilarUsersById.js",
-    "match-users": "node build/scripts/pinecone/users/matchUsers.js",
+    "fill-users": "node build/scripts/users/fill.js",
+    "insert-user": "node build/scripts/users/insert.js",
+    "match-users": "node build/scripts/pinecone/matchUsers.js",
     "dev": "npm run build && npm run start"
   }
 }

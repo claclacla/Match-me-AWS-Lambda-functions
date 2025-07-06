@@ -1,7 +1,8 @@
+/*
 import { Pinecone } from '@pinecone-database/pinecone';
 import * as dotenv from 'dotenv';
 
-import { PINECONE, DATA } from "../../../config/config.json";
+import { PINECONE, DATA } from "../../config/config.json";
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ const pc = new Pinecone({
     apiKey: PINECONE_KEY
 });
 
-async function create() {
+async function createPineconeIndex() {
     try {
         console.log(`Check if "${PINECONE.INDEXES.USERS}" exists...`);
 
@@ -55,4 +56,5 @@ async function create() {
     }
 }
 
-create();
+createPineconeIndex();
+*/

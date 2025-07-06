@@ -1,3 +1,4 @@
+/*
 import { v4 as uuidv4 } from 'uuid';
 import { Pinecone } from '@pinecone-database/pinecone';
 
@@ -9,6 +10,7 @@ import { upsert as pineconeUsersUpsert } from "../repositories/pinecone/users";
 import { connect as openAIConnect } from '../openai/connect';
 import { generateTextEmbedding } from '../openai/generateTextEmbedding';
 import { generateUserNarrative } from '../openai/generateUserNarrative';
+import { generateIdealMatchProfile } from '../openai/generateIdealMatchProfile';
 
 import { UserEntity } from '../entities/UserEntity';
 import { UserDTO } from '../dtos/UserDTO';
@@ -32,14 +34,17 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
         // 1. Generate the user's narrative
 
         const narrative: string = await generateUserNarrative({ openai, insights: userDTO.insights });
-        console.log(narrative);
+        const narrativeEmbedding = await generateTextEmbedding({
+            openai,
+            text: narrative,
+            dimension: DATA.EMBEDDING_DIMENSION
+        });
 
-        // 2. Generate embedding from the user's narrative
-
-        const embedding = await generateTextEmbedding({ 
-            openai, 
-            text: narrative, 
-            dimension: DATA.EMBEDDING_DIMENSION 
+        const idealMatchProfile: string = await generateIdealMatchProfile({ openai, narrative });
+        const idealMatchProfileEmbedding = await generateTextEmbedding({
+            openai,
+            text: idealMatchProfile,
+            dimension: DATA.EMBEDDING_DIMENSION
         });
 
         // 3. Create the entity and the user creation prompt
@@ -48,7 +53,7 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
 
         const userEntity: UserEntity = {
             id: uuidv4(),
-            values: embedding,
+            values: narrativeEmbedding,
             metadata: {
                 ownerId: authenticatedUserId,
                 name: userDTO.name,
@@ -57,11 +62,13 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
                 age: userDTO.age,
                 insights: userDTO.insights,
                 narrative,
-                matchId: ""
+                matchId: "",
+                idealMatchProfile,
+                //idealMatchProfileEmbedding
             }
         }
 
-        if(userDTO.match?.id) {
+        if (userDTO.match?.id) {
             userEntity.metadata.matchId = userDTO.match.id;
         }
 
@@ -114,7 +121,7 @@ export const handler = async (event: any) => {
             };
         }
 
-        /*
+        *
         if (!userDTO.name) {
             return {
                 statusCode: 400,
@@ -122,7 +129,7 @@ export const handler = async (event: any) => {
                 body: JSON.stringify({ message: "Bad Request: 'name' are required in the request body." }),
             };
         }
-        */
+        *
 
         console.log(`Received user data - name: ${userDTO.name}`);
 
@@ -148,3 +155,4 @@ export const handler = async (event: any) => {
         };
     }
 };
+*/

@@ -1,17 +1,18 @@
+/*
 import * as dotenv from 'dotenv';
 import { RecordMetadata, ScoredPineconeRecord } from '@pinecone-database/pinecone';
 
-import { DATA } from "../../../config/config.json";
+import { DATA } from "../../config/config.json";
 
-import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
-import { query as pineconeUsersQuery } from "../../../repositories/pinecone/users";
+import { connect as pineconeConnect } from '../../repositories/pinecone/connect';
+import { query as pineconeUsersQuery } from "../../repositories/pinecone/users";
 
-import { UserEntity } from '../../../entities/UserEntity';
-import { mapPineconeUserRecordToUserEntity } from '../../../mappers/mapPineconeUserRecordToUserEntity';
+import { UserEntity } from '../../entities/UserEntity';
+import { mapPineconeUserRecordToUserEntity } from '../../mappers/mapPineconeUserRecordToUserEntity';
 
-import { connect as openAIConnect } from '../../../openai/connect';
-import { generateIdealMatchProfile } from '../../../openai/generateIdealMatchProfile';
-import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
+import { connect as openAIConnect } from '../../openai/connect';
+import { generateIdealMatchProfile } from '../../openai/generateIdealMatchProfile';
+import { generateTextEmbedding } from '../../openai/generateTextEmbedding';
 
 dotenv.config();
 
@@ -69,7 +70,7 @@ async function matchUsers() {
 
         console.log("\nEmbedding generated!\n");
 
-        // 4. Ask for the closest match to Pinecone
+        // 4. Query Pinecone for the closest match
 
         const matchQueryResult = await pineconeUsersQuery({
             pineconeClient,
@@ -83,8 +84,8 @@ async function matchUsers() {
         const pineconeUserRecord = matchQueryResult?.matches[0];
 
         if (pineconeUserRecord === undefined) {
-            console.log("All users are matched!");
-            return;
+            console.log(`No match found for user ${userEntity.metadata.name}.`);
+            continue;
         }
 
         const matchUserEntity: UserEntity = mapPineconeUserRecordToUserEntity({ pineconeUserRecord });
@@ -94,3 +95,4 @@ async function matchUsers() {
 }
 
 matchUsers();
+*/

@@ -1,3 +1,4 @@
+/*
 import { connect as pineconeConnect } from '../repositories/pinecone/connect';
 import { query as pineconeUsersQuery } from "../repositories/pinecone/users";
 
@@ -54,7 +55,8 @@ export const handler = async (event: any) => {
             location: match.metadata.location as string,
             age: match.metadata.age as number,
             insights: match.metadata.insights as string[],
-            narrative: match.metadata.narrative as string
+            narrative: match.metadata.narrative as string,
+            idealMatchProfile: match.metadata.idealMatchProfile as string
         }
 
         console.log("UserDTO: " + JSON.stringify(userDTO));
@@ -80,3 +82,4 @@ export const handler = async (event: any) => {
         };
     }
 };
+*/

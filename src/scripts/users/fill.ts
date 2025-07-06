@@ -1,19 +1,21 @@
+/*
 import * as dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import { Pinecone } from '@pinecone-database/pinecone';
 
-import { DATA, PINECONE } from "../../../config/config.json";
-import usersDataset from '../../../../assets/users.json';
+import { DATA, PINECONE } from "../../config/config.json";
+import usersDataset from '../../../assets/users.json';
 
-import { UserDTO } from '../../../dtos/UserDTO';
-import { UserEntity } from '../../../entities/UserEntity';
+import { UserDTO } from '../../dtos/UserDTO';
+import { UserEntity } from '../../entities/UserEntity';
 
-import { connect as openAIConnect } from '../../../openai/connect';
-import { generateTextEmbedding } from '../../../openai/generateTextEmbedding';
-import { generateUserNarrative } from '../../../openai/generateUserNarrative';
+import { connect as openAIConnect } from '../../openai/connect';
+import { generateTextEmbedding } from '../../openai/generateTextEmbedding';
+import { generateUserNarrative } from '../../openai/generateUserNarrative';
+import { generateIdealMatchProfile } from '../../openai/generateIdealMatchProfile';
 
-import { connect as pineconeConnect } from '../../../repositories/pinecone/connect';
-import { upsert as pineconeUsersUpsert } from "../../../repositories/pinecone/users";
+import { connect as pineconeConnect } from '../../repositories/pinecone/connect';
+import { upsert as pineconeUsersUpsert } from "../../repositories/pinecone/users";
 
 dotenv.config();
 
@@ -37,18 +39,23 @@ async function fill() {
         const usersEntities: UserEntity[] = [];
 
         for (const user of users) {
-            const narrative: string = await generateUserNarrative({ openai, insights: user.insights })
-
-            user.id = uuidv4();
-            const embedding = await generateTextEmbedding({
+            const narrative: string = await generateUserNarrative({ openai, insights: user.insights });
+            const narrativeEmbedding = await generateTextEmbedding({
                 openai,
                 text: narrative,
                 dimension: DATA.EMBEDDING_DIMENSION
             });
 
+            const idealMatchProfile: string = await generateIdealMatchProfile({ openai, narrative });
+            const idealMatchProfileEmbedding = await generateTextEmbedding({
+                openai,
+                text: idealMatchProfile,
+                dimension: DATA.EMBEDDING_DIMENSION
+            });
+
             const userEntity: UserEntity = {
                 id: user.id,
-                values: embedding,
+                values: narrativeEmbedding,
                 metadata: {
                     ownerId: uuidv4(),
                     name: user.name,
@@ -56,7 +63,9 @@ async function fill() {
                     location: user.location,
                     age: user.age,
                     insights: user.insights,
-                    narrative: narrative,
+                    narrative,
+                    idealMatchProfile,
+                    //idealMatchProfileEmbedding,
                     matchId: ""
                 },
             };
@@ -76,3 +85,4 @@ async function fill() {
 }
 
 fill();
+*/

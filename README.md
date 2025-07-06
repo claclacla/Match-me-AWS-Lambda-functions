@@ -1,24 +1,36 @@
-# Match me! (AWS Lambda functions)
+# 🧠 MatchMe · Core Logic Scripts
 
-This repository holds the AWS Lambda functions that power the secure, serverless backend for the `Match Me!` application.
+This repository contains the core scripts that power the **user logic** of the **MatchMe** application, a social platform designed to form meaningful, small-group connections between people.
 
-Utilizing `Pinecone` for efficient vector storage and AI embeddings for `semantic similarity`, these functions orchestrate the core matchmaking logic, enabling intelligent connections based on user profiles and interests. Designed as a standalone API layer, this backend is ready to integrate with separate mobile or web frontends.
+## ✨ Features
 
---------------------------------------------------------------------------------
+- 🔄 Insert and retrieve user data
+- 🧠 Generate enriched personality and group behavior descriptions using the OpenAI API
+- 📦 Store user information and insights in **DynamoDB**
 
-## Status and TO DO
+## 🚧 In Development
 
-I wrote four scripts: one to create the user index on `Pinecone`, one to seed it with initial data, one to insert a user, and one to search for users similar to a given user ID.
+An agent-based matching engine that will:
 
-The `findSimilarUsersById` script has now been used to create a Lambda function with the same name. This function retrieves similar users from Pinecone via AWS Lambda.
+- 🤖 Act as a smart agent to form and suggest ideal small groups
+- 🧩 Use OpenAI to understand group dynamics, social energy, and diversity
+- 📊 Create balanced, engaging, and context-aware groupings from unmatched users
 
-Currently, all users can access each other's data and search for similar users. The next step is to introduce an `authenticatedUserId` parameter in Pinecone to associate AWS Cognito users with their respective data.
+## 🛠️ Architecture Overview
+
+- **DynamoDB** — stores user data and AI-generated insights   
+- **OpenAI API** — used to extract meaning and personality from onboarding responses  
+- **TypeScript** — all logic written in clean, modular TS, designed for backend integration
+
+## 📦 Usage
+
+These scripts are intended to be integrated into the main backend API of the MatchMe app and can be run manually or triggered as part of automated onboarding and matching workflows.
 
 --------------------------------------------------------------------------------
 
 ## AWS 
 
-The infrastructure is based on: `Cognito` for user authentication, `AWS API Gateway` for defining the API, and `Lambda` for implementing the API functions.
+The infrastructure is based on: `Cognito` for user authentication, `AWS API Gateway` for defining the API, `Lambda` for implementing the API functions and `DynamoDB` for storing the users data.
 
 --------------------------------------------------------------------------------
 
@@ -30,6 +42,9 @@ The .env file MUST contain the following properties:
 
 - OPENAI_API_KEY
 - PINECONE_KEY
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_REGION
 
 The scripts are built using the following command:
 
@@ -41,19 +56,11 @@ npm run build
 
 ### List of scripts
 
-- Create the index `users`
-
-```bash
-
-npm run create-pinecone-users-index
-
-```
-
 - Fill the index `users` with the assets data seeds
 
 ```bash
 
-npm run fill-pinecone-users-index
+npm run fill-users
 
 ```
 
@@ -61,7 +68,7 @@ npm run fill-pinecone-users-index
 
 ```bash
 
-npm run insert-pinecone-users-index
+npm run insert-user
 
 ```
 
