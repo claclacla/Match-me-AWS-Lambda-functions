@@ -1,23 +1,21 @@
-/*
-import { connect as pineconeConnect } from '../repositories/pinecone/connect';
-import { query as pineconeUsersQuery } from "../repositories/pinecone/users";
+import { v4 as uuidv4 } from 'uuid';
 
-import { UserDTO, UserGender } from "../dtos/UserDTO";
+import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
-const PINECONE_KEY = process.env.PINECONE_KEY;
+import { UserDTO } from '../dtos/UserDTO';
+import { UserEntity } from '../entities/UserEntity';
 
-if (!PINECONE_KEY) {
-    console.error("Missing environment variable: PINECONE_KEY");
-    throw new Error("Missing PINECONE_KEY");
-}
+import { connect as dynamoDBConnect } from '../repositories/dynamoDB/connect';
+import { getByOwnerId as dynamoDBGetByOwnerId } from '../repositories/dynamoDB/users';
 
-const pineconeClient = pineconeConnect({ key: PINECONE_KEY });
+const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect();
 
 export const handler = async (event: any) => {
     try {
         console.log("Received event:", JSON.stringify(event));
 
         // Extract Cognito user ID from JWT
+
         const authenticatedUserId = event.requestContext?.authorizer?.jwt?.claims?.sub;
 
         if (!authenticatedUserId) {
@@ -30,15 +28,9 @@ export const handler = async (event: any) => {
 
         // Search by metadata.ownerId
 
-        const queryResult = await pineconeUsersQuery({
-            pineconeClient, filter: {
-                "ownerId": { "$eq": authenticatedUserId }
-            }
-        });
+        const userEntity: UserEntity | undefined = await dynamoDBGetByOwnerId({ dynamoDBClient, ownerId: authenticatedUserId });
 
-        const match = queryResult?.matches?.[0];
-
-        if (match === undefined || match.metadata === undefined) {
+        if (userEntity === undefined) {
             return {
                 statusCode: 404,
                 headers: { "Content-Type": "application/json" },
@@ -49,14 +41,13 @@ export const handler = async (event: any) => {
         // TO DO: Add a mapper to create the userDTO
 
         const userDTO: UserDTO = {
-            id: match.metadata.ownerId as string,
-            name: match.metadata.name as string,
-            gender: match.metadata.gender as UserGender,
-            location: match.metadata.location as string,
-            age: match.metadata.age as number,
-            insights: match.metadata.insights as string[],
-            narrative: match.metadata.narrative as string,
-            idealMatchProfile: match.metadata.idealMatchProfile as string
+            id: userEntity.ownerId,
+            name: userEntity.name,
+            gender: userEntity.gender,
+            location: userEntity.location,
+            yearOfBirth: userEntity.yearOfBirth,
+            insights: userEntity.insights,
+            groupBehavior: userEntity.groupBehavior 
         }
 
         console.log("UserDTO: " + JSON.stringify(userDTO));
@@ -70,7 +61,7 @@ export const handler = async (event: any) => {
         };
 
     } catch (error: any) {
-        console.error("Error in getUserByOwnerId:", error);
+        console.error("Error in dynamoDBGetByOwnerId:", error);
 
         return {
             statusCode: 500,
@@ -82,4 +73,3 @@ export const handler = async (event: any) => {
         };
     }
 };
-*/

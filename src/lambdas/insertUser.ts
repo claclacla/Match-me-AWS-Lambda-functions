@@ -1,82 +1,60 @@
-/*
 import { v4 as uuidv4 } from 'uuid';
-import { Pinecone } from '@pinecone-database/pinecone';
 
-import { DATA } from "../config/config.json";
+import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
-import { connect as pineconeConnect } from '../repositories/pinecone/connect';
-import { upsert as pineconeUsersUpsert } from "../repositories/pinecone/users";
+import { UserDTO } from '../dtos/UserDTO';
+import { UserEntity } from '../entities/UserEntity';
 
 import { connect as openAIConnect } from '../openai/connect';
-import { generateTextEmbedding } from '../openai/generateTextEmbedding';
-import { generateUserNarrative } from '../openai/generateUserNarrative';
-import { generateIdealMatchProfile } from '../openai/generateIdealMatchProfile';
+import { generateGroupBehavior } from '../openai/generateGroupBehavior';
 
-import { UserEntity } from '../entities/UserEntity';
-import { UserDTO } from '../dtos/UserDTO';
+import { connect as dynamoDBConnect } from '../repositories/dynamoDB/connect';
+import { upsert as dynamoDBUpsert } from '../repositories/dynamoDB/users';
 
-const PINECONE_KEY = process.env.PINECONE_KEY;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-if (!PINECONE_KEY || !OPENAI_API_KEY) {
-    console.error("Missing environment variables: PINECONE_KEY or OPENAI_API_KEY.");
-    throw new Error("Missing API keys configuration.");
+if (!OPENAI_API_KEY) {
+    console.error("Missing required environment variables.");
+    process.exit(1);
 }
 
-const pineconeClient: Pinecone = pineconeConnect({ key: PINECONE_KEY });
-
+const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect();
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
 async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, authenticatedUserId: string }) {
     try {
         console.log(`\nInserting new user: "${userDTO.name}"`);
 
-        // 1. Generate the user's narrative
+        // 1. Generate the user's group behavior
 
-        const narrative: string = await generateUserNarrative({ openai, insights: userDTO.insights });
-        const narrativeEmbedding = await generateTextEmbedding({
-            openai,
-            text: narrative,
-            dimension: DATA.EMBEDDING_DIMENSION
-        });
+        const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.insights });
 
-        const idealMatchProfile: string = await generateIdealMatchProfile({ openai, narrative });
-        const idealMatchProfileEmbedding = await generateTextEmbedding({
-            openai,
-            text: idealMatchProfile,
-            dimension: DATA.EMBEDDING_DIMENSION
-        });
-
-        // 3. Create the entity and the user creation prompt
+        // 2. Create the user's entity 
 
         // TO DO: Add a parser from UserDTO to UserEntity
 
         const userEntity: UserEntity = {
             id: uuidv4(),
-            values: narrativeEmbedding,
-            metadata: {
-                ownerId: authenticatedUserId,
-                name: userDTO.name,
-                gender: userDTO.gender,
-                location: userDTO.location,
-                age: userDTO.age,
-                insights: userDTO.insights,
-                narrative,
-                matchId: "",
-                idealMatchProfile,
-                //idealMatchProfileEmbedding
-            }
-        }
+            ownerId: authenticatedUserId,
+            name: userDTO.name,
+            gender: userDTO.gender,
+            location: userDTO.location,
+            yearOfBirth: userDTO.yearOfBirth,
+            insights: userDTO.insights,
+            groupBehavior
+        };
 
         if (userDTO.match?.id) {
-            userEntity.metadata.matchId = userDTO.match.id;
+            userEntity.match = {
+                id: userDTO.match.id
+            };
         }
 
         // 4. Upsert the vector into Pinecone
 
-        await pineconeUsersUpsert({ pineconeClient, users: [userEntity] });
+        await dynamoDBUpsert({ dynamoDBClient, users: [userEntity] });
 
-        console.log(`Successfully inserted user ${userEntity.metadata.name} into Pinecone.`);
+        console.log(`Successfully inserted user ${userEntity.name} into DynamoDB.`);
 
         return { success: true };
 
@@ -121,7 +99,7 @@ export const handler = async (event: any) => {
             };
         }
 
-        *
+        /*
         if (!userDTO.name) {
             return {
                 statusCode: 400,
@@ -129,7 +107,7 @@ export const handler = async (event: any) => {
                 body: JSON.stringify({ message: "Bad Request: 'name' are required in the request body." }),
             };
         }
-        *
+        */
 
         console.log(`Received user data - name: ${userDTO.name}`);
 
@@ -155,4 +133,3 @@ export const handler = async (event: any) => {
         };
     }
 };
-*/

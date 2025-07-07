@@ -1,6 +1,25 @@
-import { DynamoDBDocumentClient, BatchWriteCommand } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, BatchWriteCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
 
 import { UserEntity } from "../../entities/UserEntity";
+
+export async function getByOwnerId({ dynamoDBClient, ownerId }: { dynamoDBClient: DynamoDBDocumentClient, ownerId: string }): Promise<UserEntity | undefined> {
+    const result = await dynamoDBClient.send(
+        new QueryCommand({
+            TableName: "Users",
+            IndexName: "ownerId-index",
+            KeyConditionExpression: "ownerId = :oid",
+            ExpressionAttributeValues: {
+                ":oid": ownerId,
+            },
+        })
+    );
+
+    if (!result.Items || result.Items.length === 0) {
+        return undefined;
+    }
+
+    return result.Items[0] as UserEntity;
+}
 
 export async function upsert({ dynamoDBClient, users }: { dynamoDBClient: DynamoDBDocumentClient, users: UserEntity[] }) {
     try {
