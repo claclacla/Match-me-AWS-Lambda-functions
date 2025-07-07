@@ -49,7 +49,8 @@ async function fill() {
                 location: user.location,
                 yearOfBirth: user.yearOfBirth,
                 insights: user.insights,
-                groupBehavior
+                groupBehavior,
+                isMatched: "false"
             };
 
             usersEntities.push(userEntity);

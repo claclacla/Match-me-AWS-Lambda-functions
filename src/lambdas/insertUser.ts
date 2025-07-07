@@ -41,10 +41,12 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
             location: userDTO.location,
             yearOfBirth: userDTO.yearOfBirth,
             insights: userDTO.insights,
-            groupBehavior
+            groupBehavior,
+            isMatched: "false"
         };
 
         if (userDTO.match?.id) {
+            userEntity.isMatched = "true";
             userEntity.match = {
                 id: userDTO.match.id
             };

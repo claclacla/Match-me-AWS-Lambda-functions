@@ -1,0 +1,1 @@
+export type UserGender = 'male' | 'female' | 'not_binary' | 'prefer_not_to_say';

@@ -7,7 +7,8 @@
     "@types/dotenv": "^6.1.1",
     "@types/uuid": "^10.0.0",
     "dotenv": "^16.6.1",
-    "openai": "^5.0.1",
+    "langchain": "^0.3.29",
+    "openai": "^5.8.2",
     "typescript": "^5.8.3",
     "uuid": "^11.1.0"
   },

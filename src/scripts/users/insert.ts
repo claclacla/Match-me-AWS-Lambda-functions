@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
-import { UserDTO, UserGender } from '../../dtos/UserDTO';
+import { UserDTO } from '../../dtos/UserDTO';
 import { UserEntity } from '../../entities/UserEntity';
 
 import { connect as openAIConnect } from '../../openai/connect';
@@ -25,10 +25,10 @@ if (!OPENAI_API_KEY || !AWS_REGION || !AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_K
     process.exit(1);
 }
 
-const userDTO = {
+const userDTO: UserDTO = {
     id: "24a73e90-8c92-4a27-983a-3de2297bc654",
     name: "Sofia Marino",
-    gender: "female" as UserGender,
+    gender: "female",
     yearOfBirth: 1996,
     location: "Milan",
     insights: [
@@ -60,7 +60,8 @@ async function insert({ user }: { user: UserDTO }) {
         location: user.location,
         yearOfBirth: user.yearOfBirth,
         insights: user.insights,
-        groupBehavior
+        groupBehavior,
+        isMatched: "false"
     };
 
     console.log(`Inserting the new user...`);

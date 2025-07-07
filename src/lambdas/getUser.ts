@@ -47,7 +47,13 @@ export const handler = async (event: any) => {
             location: userEntity.location,
             yearOfBirth: userEntity.yearOfBirth,
             insights: userEntity.insights,
-            groupBehavior: userEntity.groupBehavior 
+            groupBehavior: userEntity.groupBehavior
+        }
+
+        if (userEntity.match?.id) {
+            userDTO.match = {
+                id: userEntity.match.id
+            };
         }
 
         console.log("UserDTO: " + JSON.stringify(userDTO));

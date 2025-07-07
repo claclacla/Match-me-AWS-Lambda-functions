@@ -1,4 +1,4 @@
-export type UserGender = 'male' | 'female' | 'not_binary' | 'prefer_not_to_say';
+import { UserGender } from "../types/UserGender";
 
 export const GENDER_OPTIONS = [
     { label: 'Uomo', value: 'male' as UserGender },
@@ -10,14 +10,14 @@ export const GENDER_OPTIONS = [
 export const DEFAULT_GENDER: UserGender = 'prefer_not_to_say';
 
 export interface UserDTO {
-    id: string;
-    name: string;
-    gender: UserGender;
-    location: string;
-    yearOfBirth: number;
-    insights: string[];
-    groupBehavior: string;
+    id: string,
+    name: string,
+    gender: UserGender,
+    location: string,
+    yearOfBirth: number,
+    insights: string[],
+    groupBehavior: string,
     match?: {
-        id: string;
+        id: string,
     }
 }
