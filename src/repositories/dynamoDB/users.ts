@@ -21,6 +21,17 @@ export async function getByOwnerId({ dynamoDBClient, ownerId }: { dynamoDBClient
     return result.Items[0] as UserEntity;
 }
 
+export async function getUnmatchedUsers({ dynamoDBClient }: { dynamoDBClient: DynamoDBDocumentClient }): Promise<UserEntity[]> {
+    const result = await dynamoDBClient.send(new QueryCommand({
+        TableName: "Users",
+        IndexName: "isMatched-index",
+        KeyConditionExpression: "isMatched = :val",
+        ExpressionAttributeValues: { ":val": "false" }
+    }));
+
+    return result.Items ? (result.Items as UserEntity[]) : [];
+}
+
 export async function upsert({ dynamoDBClient, users }: { dynamoDBClient: DynamoDBDocumentClient, users: UserEntity[] }) {
     try {
         const putRequests = users.map(user => ({

@@ -7,10 +7,10 @@
     "@types/dotenv": "^6.1.1",
     "@types/uuid": "^10.0.0",
     "dotenv": "^16.6.1",
-    "langchain": "^0.3.29",
     "openai": "^5.8.2",
     "typescript": "^5.8.3",
-    "uuid": "^11.1.0"
+    "uuid": "^11.1.0",
+    "zod": "^3.25.75"
   },
   "devDependencies": {
     "@types/node": "^22.15.24"
@@ -19,7 +19,7 @@
     "build": "npx tsc",
     "fill-users": "node build/scripts/users/fill.js",
     "insert-user": "node build/scripts/users/insert.js",
-    "match-users": "node build/scripts/pinecone/matchUsers.js",
+    "match-users": "node build/scripts/users/matchUsers.js",
     "dev": "npm run build && npm run start"
   }
 }
