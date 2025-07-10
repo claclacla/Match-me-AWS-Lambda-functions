@@ -1,11 +1,13 @@
-import { DynamoDBDocumentClient, BatchWriteCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, BatchWriteCommand, QueryCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
 
 import { UserEntity } from "../../entities/UserEntity";
+
+const TABLE_NAME: string = "Users";
 
 export async function getByOwnerId({ dynamoDBClient, ownerId }: { dynamoDBClient: DynamoDBDocumentClient, ownerId: string }): Promise<UserEntity | undefined> {
     const result = await dynamoDBClient.send(
         new QueryCommand({
-            TableName: "Users",
+            TableName: TABLE_NAME,
             IndexName: "ownerId-index",
             KeyConditionExpression: "ownerId = :oid",
             ExpressionAttributeValues: {
@@ -23,13 +25,41 @@ export async function getByOwnerId({ dynamoDBClient, ownerId }: { dynamoDBClient
 
 export async function getUnmatchedUsers({ dynamoDBClient }: { dynamoDBClient: DynamoDBDocumentClient }): Promise<UserEntity[]> {
     const result = await dynamoDBClient.send(new QueryCommand({
-        TableName: "Users",
+        TableName: TABLE_NAME,
         IndexName: "isMatched-index",
         KeyConditionExpression: "isMatched = :val",
         ExpressionAttributeValues: { ":val": "false" }
     }));
 
     return result.Items ? (result.Items as UserEntity[]) : [];
+}
+
+export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, groupBehavior }:
+    { dynamoDBClient: DynamoDBDocumentClient, ownerId: string, insights: string[], groupBehavior: string }): Promise<void> {
+    const result = await dynamoDBClient.send(new QueryCommand({
+        TableName: TABLE_NAME,
+        IndexName: 'ownerId-index',
+        KeyConditionExpression: 'ownerId = :oid',
+        ExpressionAttributeValues: {
+            ':oid': ownerId
+        }
+    }));
+
+    const item = result.Items?.[0];
+
+    if (!item) {
+        throw new Error("User not found");
+    }
+
+    await dynamoDBClient.send(new UpdateCommand({
+        TableName: TABLE_NAME,
+        Key: { id: item.id },
+        UpdateExpression: 'SET insights = :in, groupBehavior = :gb',
+        ExpressionAttributeValues: {
+            ':in': insights,
+            ':gb': groupBehavior,
+        },
+    }));
 }
 
 export async function upsert({ dynamoDBClient, users }: { dynamoDBClient: DynamoDBDocumentClient, users: UserEntity[] }) {
@@ -42,7 +72,7 @@ export async function upsert({ dynamoDBClient, users }: { dynamoDBClient: Dynamo
 
         const command = new BatchWriteCommand({
             RequestItems: {
-                Users: putRequests
+                [TABLE_NAME]: putRequests
             }
         });
 

@@ -7,6 +7,7 @@ import { UserEntity } from '../entities/UserEntity';
 
 import { connect as dynamoDBConnect } from '../repositories/dynamoDB/connect';
 import { getByOwnerId as dynamoDBGetByOwnerId } from '../repositories/dynamoDB/users';
+import { mapUserEntityToUserDTO } from '../mappers/mapUserEntityToUserDTO';
 
 const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect();
 
@@ -40,22 +41,7 @@ export const handler = async (event: any) => {
 
         // TO DO: Add a mapper to create the userDTO
 
-        const userDTO: UserDTO = {
-            id: userEntity.ownerId,
-            name: userEntity.name,
-            gender: userEntity.gender,
-            location: userEntity.location,
-            yearOfBirth: userEntity.yearOfBirth,
-            languages: userEntity.languages,
-            insights: userEntity.insights,
-            groupBehavior: userEntity.groupBehavior
-        }
-
-        if (userEntity.match?.id) {
-            userDTO.match = {
-                id: userEntity.match.id
-            };
-        }
+        const userDTO: UserDTO = mapUserEntityToUserDTO({ userEntity });
 
         console.log("UserDTO: " + JSON.stringify(userDTO));
 

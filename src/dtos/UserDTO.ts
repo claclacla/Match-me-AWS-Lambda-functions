@@ -10,7 +10,7 @@ export const GENDER_OPTIONS = [
 export const DEFAULT_GENDER: UserGender = 'prefer_not_to_say';
 
 export interface UserDTO {
-    id: string,
+    id: string,                 // The Cognito user's id
     name: string,
     gender: UserGender,
     location: string,
