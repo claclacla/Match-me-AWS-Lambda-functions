@@ -46,6 +46,7 @@ export const handler = async (event: any) => {
             gender: userEntity.gender,
             location: userEntity.location,
             yearOfBirth: userEntity.yearOfBirth,
+            languages: userEntity.languages,
             insights: userEntity.insights,
             groupBehavior: userEntity.groupBehavior
         }

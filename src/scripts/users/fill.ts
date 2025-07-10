@@ -48,6 +48,7 @@ async function fill() {
                 gender: user.gender,
                 location: user.location,
                 yearOfBirth: user.yearOfBirth,
+                languages: user.languages,
                 insights: user.insights,
                 groupBehavior,
                 isMatched: "false"

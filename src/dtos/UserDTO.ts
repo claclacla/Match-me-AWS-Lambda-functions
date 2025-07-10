@@ -15,6 +15,7 @@ export interface UserDTO {
     gender: UserGender,
     location: string,
     yearOfBirth: number,
+    languages: string[],
     insights: string[],
     groupBehavior: string,
     match?: {

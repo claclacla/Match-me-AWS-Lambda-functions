@@ -40,6 +40,7 @@ async function insertUser({ userDTO, authenticatedUserId }: { userDTO: UserDTO, 
             gender: userDTO.gender,
             location: userDTO.location,
             yearOfBirth: userDTO.yearOfBirth,
+            languages: userDTO.languages,
             insights: userDTO.insights,
             groupBehavior,
             isMatched: "false"

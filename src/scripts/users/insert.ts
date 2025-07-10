@@ -31,6 +31,10 @@ const userDTO: UserDTO = {
     gender: "female",
     yearOfBirth: 1996,
     location: "Milan",
+    "languages": [
+        "Italian",
+        "English"
+    ],
     insights: [
         "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
         "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
@@ -59,6 +63,7 @@ async function insert({ user }: { user: UserDTO }) {
         gender: user.gender,
         location: user.location,
         yearOfBirth: user.yearOfBirth,
+        languages: user.languages,
         insights: user.insights,
         groupBehavior,
         isMatched: "false"

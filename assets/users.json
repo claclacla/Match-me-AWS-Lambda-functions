@@ -5,6 +5,10 @@
         "gender": "male",
         "yearOfBirth": 1994,
         "location": "Naples",
+        "languages": [
+            "Italian",
+            "English"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m a planner — I help organize the chaos.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Start a practical discussion on plan B.",
@@ -25,6 +29,10 @@
         "gender": "female",
         "yearOfBirth": 1998,
         "location": "Florence",
+        "languages": [
+            "Italian",
+            "French"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt — tell me what’s needed, I’ll jump in.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
@@ -45,6 +53,10 @@
         "gender": "male",
         "yearOfBirth": 1990,
         "location": "Turin",
+        "languages": [
+            "Italian",
+            "German"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Let others talk while you reflect quietly.",
@@ -65,6 +77,10 @@
         "gender": "female",
         "yearOfBirth": 1995,
         "location": "Bologna",
+        "languages": [
+            "Italian",
+            "English"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m a planner — I help organize the chaos.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Start a practical discussion on plan B.",
@@ -85,6 +101,10 @@
         "gender": "male",
         "yearOfBirth": 1997,
         "location": "Rome",
+        "languages": [
+            "Italian",
+            "Spanish"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt — tell me what’s needed, I’ll jump in.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
@@ -105,6 +125,10 @@
         "gender": "female",
         "yearOfBirth": 1993,
         "location": "Venice",
+        "languages": [
+            "Italian",
+            "English"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
@@ -125,6 +149,10 @@
         "gender": "male",
         "yearOfBirth": 1992,
         "location": "Genoa",
+        "languages": [
+            "Italian",
+            "English"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m a planner — I help organize the chaos.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Let others talk while you reflect quietly.",
@@ -145,6 +173,10 @@
         "gender": "female",
         "yearOfBirth": 1999,
         "location": "Palermo",
+        "languages": [
+            "Italian",
+            "Spanish"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt — tell me what’s needed, I’ll jump in.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Start a practical discussion on plan B.",
@@ -165,6 +197,10 @@
         "gender": "male",
         "yearOfBirth": 1989,
         "location": "Verona",
+        "languages": [
+            "Italian",
+            "English"
+        ],
         "insights": [
             "You’ve just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I’m the glue — I keep the group vibe alive.",
             "Halfway to your destination, the group faces a delay. Tension rises. What’s your move? Crack a joke or lighten the mood.",
