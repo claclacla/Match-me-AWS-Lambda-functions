@@ -1,6 +1,7 @@
 import { DynamoDBDocumentClient, BatchWriteCommand, QueryCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
 
 import { UserEntity } from "../../entities/UserEntity";
+import { PROFILE_SECTION_STATUS, ProfileSectionStatus } from "../../types/ProfileSectionStatus";
 
 const TABLE_NAME: string = "Users";
 
@@ -54,11 +55,16 @@ export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, 
     await dynamoDBClient.send(new UpdateCommand({
         TableName: TABLE_NAME,
         Key: { id: item.id },
-        UpdateExpression: 'SET insights = :in, groupBehavior = :gb',
+        UpdateExpression: 'SET insights = :in, groupBehavior = :gb, #ps.#gb = :gbs',
         ExpressionAttributeValues: {
             ':in': insights,
             ':gb': groupBehavior,
+            ':gbs': PROFILE_SECTION_STATUS.COMPLETED
         },
+        ExpressionAttributeNames: {
+            '#ps': 'profileSectionsStatus',
+            '#gb': 'groupBehavior'
+        }
     }));
 }
 

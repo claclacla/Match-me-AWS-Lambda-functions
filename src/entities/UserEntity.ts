@@ -1,5 +1,6 @@
 import { UserGender } from "../types/UserGender";
 import { BooleanString } from "../types/BooleanString";
+import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 
 export interface UserEntity {
     id: string,
@@ -14,5 +15,11 @@ export interface UserEntity {
     isMatched: BooleanString,   // Here, isMatched is a string because it's used as index in DynamoDB
     match?: {
         id: string;
+    },
+    profileSectionsStatus: {
+        personalInformation: ProfileSectionStatus,
+        avatar: ProfileSectionStatus,
+        groupBehavior: ProfileSectionStatus,
+        voiceprint: ProfileSectionStatus
     }
 }

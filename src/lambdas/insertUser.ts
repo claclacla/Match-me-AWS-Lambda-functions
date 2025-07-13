@@ -3,23 +3,14 @@ import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import { UserDTO } from '../dtos/UserDTO';
 import { UserEntity } from '../entities/UserEntity';
 
-import { connect as openAIConnect } from '../openai/connect';
-import { generateGroupBehavior } from '../openai/generateGroupBehavior';
-
 import { connect as dynamoDBConnect } from '../repositories/dynamoDB/connect';
 import { upsert as dynamoDBUpsert } from '../repositories/dynamoDB/users';
 
 import { mapUserDTOToUserEntity } from "../mappers/mapUserDTOToUserEntity";
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-
-if (!OPENAI_API_KEY) {
-    console.error("Missing required environment variables.");
-    process.exit(1);
-}
-
 const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect();
-const openai = openAIConnect({ key: OPENAI_API_KEY });
+
+// TO DO: This function MUST receive in input an InsertUserDTO with the mandatory fields only
 
 export const handler = async (event: any) => {
     try {
@@ -69,16 +60,14 @@ export const handler = async (event: any) => {
 
         userDTO.id = ownerId;
 
-        // Generate the user's group behavior
+        // Set the userDTO profileSectionsStatus fields
 
-        let groupBehavior = "";
-
-        if (Array.isArray(userDTO.insights) && userDTO.insights.length > 0) {
-            console.log("Generating the user's group behavior from the insights...");
-            groupBehavior = await generateGroupBehavior({ openai, insights: userDTO.insights });
+        userDTO.profileSectionsStatus = {
+            personalInformation: "completed",
+            avatar: "pending",
+            groupBehavior: "pending",
+            voiceprint: "pending"
         }
-
-        userDTO.groupBehavior = groupBehavior;
 
         // Create the user's entity 
 

@@ -1,3 +1,4 @@
+import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 import { UserGender } from "../types/UserGender";
 
 export const GENDER_OPTIONS = [
@@ -20,5 +21,11 @@ export interface UserDTO {
     groupBehavior: string,
     match?: {
         id: string,
+    },
+    profileSectionsStatus: {
+        personalInformation: ProfileSectionStatus,
+        avatar: ProfileSectionStatus,
+        groupBehavior: ProfileSectionStatus,
+        voiceprint: ProfileSectionStatus
     }
 }

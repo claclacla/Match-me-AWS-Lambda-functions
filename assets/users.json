@@ -21,7 +21,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "c1fcb9ae-3d4e-40a5-a9db-d89a10e4b1b2",
@@ -45,7 +51,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Watch how it plays out — dynamics reveal truth.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Not really — I prefer to move on."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "f3cbd135-b310-48f3-8c9a-207cb0663903",
@@ -69,7 +81,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Keep things moving — it’ll sort itself.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Maybe — depends on how things evolve."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "a3c88276-91f6-4a7c-9c4e-d03b5f9d3d0b",
@@ -93,7 +111,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "dd21b8c3-0a10-44c2-9837-c48a16d6b6d2",
@@ -117,7 +141,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Keep things moving — it’ll sort itself.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "ba4c3db3-7a2f-4a42-b32c-bd3fcbf6f4d1",
@@ -141,7 +171,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "b7f7a5de-1c54-4d79-9123-78f1a0b3f8e7",
@@ -165,7 +201,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "7b19f3c2-e7b4-4f2e-9e89-c4d0934a0c59",
@@ -189,7 +231,13 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     },
     {
         "id": "8e5dcd7a-635b-4b03-8892-63f1a774c3a1",
@@ -213,6 +261,12 @@
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
         ],
-        "groupBehavior": ""
+        "groupBehavior": "",
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "completed",
+            "voiceprint": "pending"
+        }
     }
 ]

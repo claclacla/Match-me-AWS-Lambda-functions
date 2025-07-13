@@ -14,7 +14,13 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         languages: userDTO.languages,
         insights: userDTO.insights,
         groupBehavior: userDTO.groupBehavior,
-        isMatched: "false"
+        isMatched: "false",
+        profileSectionsStatus: {
+            personalInformation: userDTO.profileSectionsStatus.personalInformation,
+            avatar: userDTO.profileSectionsStatus.avatar,
+            groupBehavior: userDTO.profileSectionsStatus.groupBehavior,
+            voiceprint: userDTO.profileSectionsStatus.voiceprint
+        }
     };
 
     if (userDTO.match?.id) {

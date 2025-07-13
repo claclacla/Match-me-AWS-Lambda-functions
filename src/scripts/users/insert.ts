@@ -1,5 +1,4 @@
 import * as dotenv from 'dotenv';
-import { v4 as uuidv4 } from 'uuid';
 
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
@@ -11,6 +10,8 @@ import { generateGroupBehavior } from '../../openai/generateGroupBehavior';
 
 import { connect as dynamoDBConnect } from '../../repositories/dynamoDB/connect';
 import { upsert as dynamoDBUpsert } from '../../repositories/dynamoDB/users';
+
+import { mapUserDTOToUserEntity } from '../../mappers/mapUserDTOToUserEntity';
 
 dotenv.config();
 
@@ -47,27 +48,23 @@ const userDTO: UserDTO = {
         "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
         "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
     ],
-    groupBehavior: ""
+    groupBehavior: "",
+    profileSectionsStatus: {
+        personalInformation: "completed",
+        avatar: "pending",
+        groupBehavior: "completed",
+        voiceprint: "pending"
+    }
 };
 
 const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect({ region: AWS_REGION, accessKeyId: AWS_ACCESS_KEY_ID, secretAccessKey: AWS_SECRET_ACCESS_KEY });
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
-async function insert({ user }: { user: UserDTO }) {
-    const groupBehavior: string = await generateGroupBehavior({ openai, insights: user.insights });
+async function insert({ userDTO }: { userDTO: UserDTO }) {
+    const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.insights });
+    userDTO.groupBehavior = groupBehavior;
 
-    const userEntity: UserEntity = {
-        id: user.id,
-        ownerId: uuidv4(),
-        name: user.name,
-        gender: user.gender,
-        location: user.location,
-        yearOfBirth: user.yearOfBirth,
-        languages: user.languages,
-        insights: user.insights,
-        groupBehavior,
-        isMatched: "false"
-    };
+    const userEntity: UserEntity = mapUserDTOToUserEntity({ userDTO });
 
     console.log(`Inserting the new user...`);
 
@@ -76,4 +73,4 @@ async function insert({ user }: { user: UserDTO }) {
     console.log("New user added!");
 }
 
-insert({ user: userDTO });
+insert({ userDTO: userDTO });

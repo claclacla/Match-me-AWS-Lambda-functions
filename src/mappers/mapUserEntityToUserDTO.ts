@@ -10,7 +10,13 @@ export function mapUserEntityToUserDTO({ userEntity }: { userEntity: UserEntity 
         yearOfBirth: userEntity.yearOfBirth,
         languages: userEntity.languages,
         insights: userEntity.insights,
-        groupBehavior: userEntity.groupBehavior
+        groupBehavior: userEntity.groupBehavior,
+        profileSectionsStatus: {
+            personalInformation: userEntity.profileSectionsStatus.personalInformation,
+            avatar: userEntity.profileSectionsStatus.avatar,
+            groupBehavior: userEntity.profileSectionsStatus.groupBehavior,
+            voiceprint: userEntity.profileSectionsStatus.voiceprint
+        }
     }
 
     if (userEntity.match?.id) {
