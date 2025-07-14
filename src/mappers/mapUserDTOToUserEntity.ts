@@ -8,6 +8,7 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         id: uuidv4(),
         ownerId: userDTO.id,
         name: userDTO.name,
+        surname: userDTO.surname,
         gender: userDTO.gender,
         location: userDTO.location,
         yearOfBirth: userDTO.yearOfBirth,

@@ -5,6 +5,7 @@ export function mapUserEntityToUserDTO({ userEntity }: { userEntity: UserEntity 
     const userDTO: UserDTO = {
         id: userEntity.ownerId,
         name: userEntity.name,
+        surname: userEntity.surname,
         gender: userEntity.gender,
         location: userEntity.location,
         yearOfBirth: userEntity.yearOfBirth,

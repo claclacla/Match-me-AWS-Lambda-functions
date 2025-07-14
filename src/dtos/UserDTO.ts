@@ -13,6 +13,7 @@ export const DEFAULT_GENDER: UserGender = 'prefer_not_to_say';
 export interface UserDTO {
     id: string,                 // The Cognito user's id
     name: string,
+    surname: string,
     gender: UserGender,
     location: string,
     yearOfBirth: number,

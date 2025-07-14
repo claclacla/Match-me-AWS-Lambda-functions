@@ -6,6 +6,7 @@ export interface UserEntity {
     id: string,
     ownerId: string,            // The Cognito user's id or the UserDTO.id
     name: string,
+    surname: string,
     gender: UserGender,
     location: string,
     yearOfBirth: number,

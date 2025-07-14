@@ -1,7 +1,8 @@
 [
   {
     "id": "a31884fb-8730-4ad1-a8f5-6c97cb1333f6",
-    "name": "Elena Bianchi",
+    "name": "Elena",
+    "surname": "Bianchi",
     "gender": "female",
     "yearOfBirth": 1990,
     "location": "Palermo",
@@ -27,13 +28,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "fdbc7cef-53b7-4e14-91bf-fb164c9cc6b6",
-    "name": "Davide Russo",
+    "name": "Davide",
+    "surname": "Russo",
     "gender": "male",
     "yearOfBirth": 1988,
     "location": "Rome",
@@ -59,13 +61,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "1beddfb8-2cb0-4a81-9498-15644db89dc5",
-    "name": "Sara Greco",
+    "name": "Sara",
+    "surname": "Greco",
     "gender": "female",
     "yearOfBirth": 1994,
     "location": "Palermo",
@@ -91,13 +94,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "81560c70-35bb-4b4c-a8cd-32bf5ed1a745",
-    "name": "Matteo De Luca",
+    "name": "Matteo",
+    "surname": "De Luca",
     "gender": "male",
     "yearOfBirth": 1998,
     "location": "Rome",
@@ -123,13 +127,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "0e397af2-9bd6-4f5e-956f-3f82e1c18e35",
-    "name": "Francesca Rinaldi",
+    "name": "Francesca",
+    "surname": "Rinaldi",
     "gender": "female",
     "yearOfBirth": 1992,
     "location": "Turin",
@@ -155,13 +160,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "0b7193aa-925d-4c08-9023-6141c5bb15da",
-    "name": "Lorenzo Martini",
+    "name": "Lorenzo",
+    "surname": "Martini",
     "gender": "male",
     "yearOfBirth": 1999,
     "location": "Turin",
@@ -187,13 +193,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "3a5366ed-2703-4825-b0b6-55768cb4d6ea",
-    "name": "Chiara Giordano",
+    "name": "Chiara",
+    "surname": "Giordano",
     "gender": "female",
     "yearOfBirth": 1994,
     "location": "Naples",
@@ -219,13 +226,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "49eb752f-4e06-4152-9518-41eeba93bf96",
-    "name": "Alessandro Costa",
+    "name": "Alessandro",
+    "surname": "Costa",
     "gender": "male",
     "yearOfBirth": 1991,
     "location": "Palermo",
@@ -251,13 +259,14 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   },
   {
     "id": "99b51773-1b85-403c-865c-6d9c1c692746",
-    "name": "Giulia Fontana",
+    "name": "Giulia",
+    "surname": "Fontana",
     "gender": "female",
     "yearOfBirth": 1998,
     "location": "Verona",
@@ -283,39 +292,7 @@
     "profileSectionsStatus": {
       "personalInformation": "completed",
       "avatar": "pending",
-      "groupBehavior": "completed",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "3db54d5c-426a-4153-aec0-a4c0a3f99800",
-    "name": "Niccol\u00f2 Ferri",
-    "gender": "male",
-    "yearOfBirth": 1988,
-    "location": "Florence",
-    "languages": [
-      "Italian",
-      "French"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Start a practical discussion on plan B.",
-        "One member dominates the group talk, cutting others off. What do you do? Stay out - it's not your fight.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say Hard to say - I'm still figuring it out.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Absolutely - I value these bonds."
-      ],
-      "behavior": ""
-    },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "completed",
+      "groupBehavior": "pending",
       "voiceprint": "pending"
     }
   }

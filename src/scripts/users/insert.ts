@@ -28,7 +28,8 @@ if (!OPENAI_API_KEY || !AWS_REGION || !AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_K
 
 const userDTO: UserDTO = {
     id: "24a73e90-8c92-4a27-983a-3de2297bc654",
-    name: "Sofia Marino",
+    name: "Sofia",
+    surname: "Marino",
     gender: "female",
     yearOfBirth: 1996,
     location: "Milan",
