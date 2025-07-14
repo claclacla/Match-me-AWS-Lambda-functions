@@ -8,7 +8,7 @@ export interface UserEntity {
     name: string,
     surname: string,
     gender: UserGender,
-    country: string,
+    country?: string,
     location: string,
     yearOfBirth: number,
     languages: string[],
