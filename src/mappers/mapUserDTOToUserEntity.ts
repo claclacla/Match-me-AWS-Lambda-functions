@@ -12,8 +12,7 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         location: userDTO.location,
         yearOfBirth: userDTO.yearOfBirth,
         languages: userDTO.languages,
-        insights: userDTO.insights,
-        groupBehavior: userDTO.groupBehavior,
+        groupProfile: userDTO.groupProfile,
         isMatched: "false",
         profileSectionsStatus: {
             personalInformation: userDTO.profileSectionsStatus.personalInformation,

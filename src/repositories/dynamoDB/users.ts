@@ -55,15 +55,18 @@ export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, 
     await dynamoDBClient.send(new UpdateCommand({
         TableName: TABLE_NAME,
         Key: { id: item.id },
-        UpdateExpression: 'SET insights = :in, groupBehavior = :gb, #ps.#gb = :gbs',
+        UpdateExpression: 'SET #gp.#in = :gpin, #gp.#be = :gpbe, #pss.#pssgb = :pssgb',
         ExpressionAttributeValues: {
-            ':in': insights,
-            ':gb': groupBehavior,
-            ':gbs': PROFILE_SECTION_STATUS.COMPLETED
+            ':gpin': insights,
+            ':gpbe': groupBehavior,
+            ':pssgb': PROFILE_SECTION_STATUS.COMPLETED
         },
         ExpressionAttributeNames: {
-            '#ps': 'profileSectionsStatus',
-            '#gb': 'groupBehavior'
+            '#gp': 'groupProfile',
+            '#in': 'insights',
+            '#be': 'behavior',
+            '#pss': 'profileSectionsStatus',
+            '#pssgb': 'groupBehavior'
         }
     }));
 }

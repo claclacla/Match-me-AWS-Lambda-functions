@@ -9,8 +9,7 @@ export function mapUserEntityToUserDTO({ userEntity }: { userEntity: UserEntity 
         location: userEntity.location,
         yearOfBirth: userEntity.yearOfBirth,
         languages: userEntity.languages,
-        insights: userEntity.insights,
-        groupBehavior: userEntity.groupBehavior,
+        groupProfile: userEntity.groupProfile,
         profileSectionsStatus: {
             personalInformation: userEntity.profileSectionsStatus.personalInformation,
             avatar: userEntity.profileSectionsStatus.avatar,

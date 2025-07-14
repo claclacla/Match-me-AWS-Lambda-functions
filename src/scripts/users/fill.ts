@@ -40,8 +40,8 @@ async function fill() {
         const usersEntities: UserEntity[] = [];
 
         for (const userDTO of usersDTO) {
-            const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.insights });
-            userDTO.groupBehavior = groupBehavior;
+            const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.groupProfile.insights });
+            userDTO.groupProfile.behavior = groupBehavior;
 
             const userEntity: UserEntity = mapUserDTOToUserEntity({ userDTO });
 

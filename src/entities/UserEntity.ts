@@ -10,8 +10,10 @@ export interface UserEntity {
     location: string,
     yearOfBirth: number,
     languages: string[],
-    insights: string[],
-    groupBehavior: string,
+    groupProfile: {
+        insights: string[],
+        behavior: string
+    },
     isMatched: BooleanString,   // Here, isMatched is a string because it's used as index in DynamoDB
     match?: {
         id: string;
