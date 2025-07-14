@@ -31,6 +31,7 @@ const userDTO: UserDTO = {
     name: "Sofia",
     surname: "Marino",
     gender: "female",
+    country: "Italy",
     yearOfBirth: 1996,
     location: "Milan",
     "languages": [

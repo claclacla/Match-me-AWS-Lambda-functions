@@ -10,6 +10,7 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         name: userDTO.name,
         surname: userDTO.surname,
         gender: userDTO.gender,
+        country: userDTO.country,
         location: userDTO.location,
         yearOfBirth: userDTO.yearOfBirth,
         languages: userDTO.languages,
