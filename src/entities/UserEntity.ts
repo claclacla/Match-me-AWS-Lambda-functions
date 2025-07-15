@@ -1,6 +1,7 @@
 import { UserGender } from "../types/UserGender";
 import { BooleanString } from "../types/BooleanString";
 import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
+import { ProfileSectionKey } from "../types/ProfileSectionKey";
 
 export interface UserEntity {
     id: string,
@@ -20,10 +21,5 @@ export interface UserEntity {
     match?: {
         id: string;
     },
-    profileSectionsStatus: {
-        personalInformation: ProfileSectionStatus,
-        avatar: ProfileSectionStatus,
-        groupBehavior: ProfileSectionStatus,
-        voiceprint: ProfileSectionStatus
-    }
+    profileSectionsStatus: Record<ProfileSectionKey, ProfileSectionStatus>
 }

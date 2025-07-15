@@ -71,6 +71,28 @@ export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, 
     }));
 }
 
+export async function setUserProfileSectionStatus({ dynamoDBClient, ownerId, section, value }: {
+    dynamoDBClient: DynamoDBDocumentClient, ownerId: string, section: keyof typeof PROFILE_SECTION_STATUS, value: ProfileSectionStatus }): Promise<void> {
+    const item = await getByOwnerId({ dynamoDBClient, ownerId });
+
+    if (!item) {
+        throw new Error("User not found");
+    }
+
+    await dynamoDBClient.send(new UpdateCommand({
+        TableName: TABLE_NAME,
+        Key: { id: item.id },
+        UpdateExpression: 'SET #pss.#section = :value',
+        ExpressionAttributeValues: {
+            ':value': value,
+        },
+        ExpressionAttributeNames: {
+            '#pss': 'profileSectionsStatus',
+            '#section': section,
+        },
+    }));
+}
+
 export async function upsert({ dynamoDBClient, users }: { dynamoDBClient: DynamoDBDocumentClient, users: UserEntity[] }) {
     try {
         const putRequests = users.map(user => ({

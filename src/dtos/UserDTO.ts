@@ -1,3 +1,4 @@
+import { ProfileSectionKey } from "../types/ProfileSectionKey";
 import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 import { UserGender } from "../types/UserGender";
 
@@ -26,10 +27,5 @@ export interface UserDTO {
     match?: {
         id: string,
     },
-    profileSectionsStatus: {
-        personalInformation: ProfileSectionStatus,
-        avatar: ProfileSectionStatus,
-        groupBehavior: ProfileSectionStatus,
-        voiceprint: ProfileSectionStatus
-    }
+    profileSectionsStatus: Record<ProfileSectionKey, ProfileSectionStatus>
 }
