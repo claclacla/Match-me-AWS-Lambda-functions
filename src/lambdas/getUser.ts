@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
-
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
 import { UserDTO } from '../dtos/UserDTO';

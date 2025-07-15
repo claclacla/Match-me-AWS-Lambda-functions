@@ -20,6 +20,7 @@ export interface UserDTO {
     location: string,
     yearOfBirth: number,
     languages: string[],
+    avatar?: string,
     groupProfile: {
         insights: string[],
         behavior: string

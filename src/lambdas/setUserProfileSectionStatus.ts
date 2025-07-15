@@ -6,13 +6,6 @@ import { setUserProfileSectionStatus } from '../repositories/dynamoDB/users';
 import { PROFILE_SECTION_STATUS } from "../types/ProfileSectionStatus";
 import { PROFILE_SECTION_KEYS } from "../types/ProfileSectionKey";
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-
-if (!OPENAI_API_KEY) {
-    console.error("Missing required environment variables.");
-    process.exit(1);
-}
-
 const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect();
 
 export const handler = async (event: any) => {

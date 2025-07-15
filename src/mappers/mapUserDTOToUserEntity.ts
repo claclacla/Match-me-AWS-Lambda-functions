@@ -23,6 +23,10 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         }
     };
 
+    if(userDTO.avatar !== undefined) {
+        userEntity.avatar = userDTO.avatar;
+    }
+
     if(userDTO.country !== undefined) {
         userEntity.country = userDTO.country;
     }

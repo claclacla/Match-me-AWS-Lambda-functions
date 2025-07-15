@@ -19,6 +19,10 @@ export function mapUserEntityToUserDTO({ userEntity }: { userEntity: UserEntity 
         }
     }
 
+    if (userDTO.avatar !== undefined) {
+        userEntity.avatar = userDTO.avatar;
+    }
+
     if (userDTO.country !== undefined) {
         userEntity.country = userDTO.country;
     }
