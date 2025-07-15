@@ -37,16 +37,7 @@ export async function getUnmatchedUsers({ dynamoDBClient }: { dynamoDBClient: Dy
 
 export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, groupBehavior }:
     { dynamoDBClient: DynamoDBDocumentClient, ownerId: string, insights: string[], groupBehavior: string }): Promise<void> {
-    const result = await dynamoDBClient.send(new QueryCommand({
-        TableName: TABLE_NAME,
-        IndexName: 'ownerId-index',
-        KeyConditionExpression: 'ownerId = :oid',
-        ExpressionAttributeValues: {
-            ':oid': ownerId
-        }
-    }));
-
-    const item = result.Items?.[0];
+    const item = await getByOwnerId({ dynamoDBClient, ownerId });
 
     if (!item) {
         throw new Error("User not found");
