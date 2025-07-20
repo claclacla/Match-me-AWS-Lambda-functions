@@ -1,6 +1,7 @@
 import { ProfileSectionKey } from "../types/ProfileSectionKey";
 import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 import { UserGender } from "../types/UserGender";
+import { LocationData } from "../types/LocationData";
 
 export const GENDER_OPTIONS = [
     { label: 'Uomo', value: 'male' as UserGender },
@@ -17,7 +18,7 @@ export interface UserDTO {
     surname: string,
     gender: UserGender,
     country?: string,
-    location: string,
+    location: LocationData,
     yearOfBirth: number,
     languages: string[],
     avatar?: string,

@@ -33,7 +33,11 @@ const userDTO: UserDTO = {
     gender: "female",
     country: "Italy",
     yearOfBirth: 1996,
-    location: "Milan",
+    location: {
+        name: "Milan",
+        lat: 45.4642,
+        lng: 9.1900,
+    },
     "languages": [
         "Italian",
         "English"

@@ -2,6 +2,7 @@ import { UserGender } from "../types/UserGender";
 import { BooleanString } from "../types/BooleanString";
 import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 import { ProfileSectionKey } from "../types/ProfileSectionKey";
+import { LocationData } from "../types/LocationData";
 
 export interface UserEntity {
     id: string,
@@ -10,7 +11,7 @@ export interface UserEntity {
     surname: string,
     gender: UserGender,
     country?: string,
-    location: string,
+    location: LocationData,
     yearOfBirth: number,
     languages: string[],
     avatar?: string,

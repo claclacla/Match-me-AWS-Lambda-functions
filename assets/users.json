@@ -1,308 +1,344 @@
 [
-  {
-    "id": "a31884fb-8730-4ad1-a8f5-6c97cb1333f6",
-    "name": "Elena",
-    "surname": "Bianchi",
-    "gender": "female",
-    "country": "Italy",
-    "yearOfBirth": 1990,
-    "location": "Palermo",
-    "languages": [
-      "Italian",
-      "French"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I stay neutral and observe.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-      ],
-      "behavior": ""
+    {
+        "id": "a31884fb-8730-4ad1-a8f5-6c97cb1333f6",
+        "name": "Elena",
+        "surname": "Bianchi",
+        "gender": "female",
+        "country": "Italy",
+        "yearOfBirth": 1990,
+        "location": {
+            "name": "Palermo",
+            "lat": 38.1157,
+            "lng": 13.3615
+        },
+        "languages": [
+            "Italian",
+            "French"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I stay neutral and observe.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "fdbc7cef-53b7-4e14-91bf-fb164c9cc6b6",
-    "name": "Davide",
-    "surname": "Russo",
-    "gender": "male",
-    "country": "Italy",
-    "yearOfBirth": 1988,
-    "location": "Rome",
-    "languages": [
-      "Italian",
-      "German"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Let others talk while you reflect quietly.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Name it gently and check in with both.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-      ],
-      "behavior": ""
+    {
+        "id": "fdbc7cef-53b7-4e14-91bf-fb164c9cc6b6",
+        "name": "Davide",
+        "surname": "Russo",
+        "gender": "male",
+        "country": "Italy",
+        "yearOfBirth": 1988,
+        "location": {
+            "name": "Rome",
+            "lat": 41.9028,
+            "lng": 12.4964
+        },
+        "languages": [
+            "Italian",
+            "German"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Let others talk while you reflect quietly.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Name it gently and check in with both.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "1beddfb8-2cb0-4a81-9498-15644db89dc5",
-    "name": "Sara",
-    "surname": "Greco",
-    "gender": "female",
-    "country": "Italy",
-    "yearOfBirth": 1994,
-    "location": "Palermo",
-    "languages": [
-      "Italian",
-      "French"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Start a practical discussion on plan B.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Embarrassed - I try to quietly blend in.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-      ],
-      "behavior": ""
+    {
+        "id": "1beddfb8-2cb0-4a81-9498-15644db89dc5",
+        "name": "Sara",
+        "surname": "Greco",
+        "gender": "female",
+        "country": "Italy",
+        "yearOfBirth": 1994,
+        "location": {
+            "name": "Rome",
+            "lat": 41.9028,
+            "lng": 12.4964
+        },
+        "languages": [
+            "Italian",
+            "French"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Start a practical discussion on plan B.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Embarrassed - I try to quietly blend in.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "81560c70-35bb-4b4c-a8cd-32bf5ed1a745",
-    "name": "Matteo",
-    "surname": "De Luca",
-    "gender": "male",
-    "country": "Italy",
-    "yearOfBirth": 1998,
-    "location": "Rome",
-    "languages": [
-      "Italian",
-      "English"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm the glue - I keep the group vibe alive.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Invite them in with an open question.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-      ],
-      "behavior": ""
+    {
+        "id": "81560c70-35bb-4b4c-a8cd-32bf5ed1a745",
+        "name": "Matteo",
+        "surname": "De Luca",
+        "gender": "male",
+        "country": "Italy",
+        "yearOfBirth": 1998,
+        "location": {
+            "name": "Rome",
+            "lat": 41.9028,
+            "lng": 12.4964
+        },
+        "languages": [
+            "Italian",
+            "English"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm the glue - I keep the group vibe alive.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Invite them in with an open question.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "0e397af2-9bd6-4f5e-956f-3f82e1c18e35",
-    "name": "Francesca",
-    "surname": "Rinaldi",
-    "gender": "female",
-    "country": "Italy",
-    "yearOfBirth": 1992,
-    "location": "Turin",
-    "languages": [
-      "Italian",
-      "English"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Let others talk while you reflect quietly.",
-        "One member dominates the group talk, cutting others off. What do you do? Stay out - it's not your fight.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I listen, then suggest a compromise.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-      ],
-      "behavior": ""
+    {
+        "id": "0e397af2-9bd6-4f5e-956f-3f82e1c18e35",
+        "name": "Francesca",
+        "surname": "Rinaldi",
+        "gender": "female",
+        "country": "Italy",
+        "yearOfBirth": 1992,
+        "location": {
+            "name": "Turin",
+            "lat": 45.0703,
+            "lng": 7.6869
+        },
+        "languages": [
+            "Italian",
+            "English"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Let others talk while you reflect quietly.",
+                "One member dominates the group talk, cutting others off. What do you do? Stay out - it's not your fight.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Slightly off, but I'll catch up fast.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I listen, then suggest a compromise.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Let them be - silence can be powerful too.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "0b7193aa-925d-4c08-9023-6141c5bb15da",
-    "name": "Lorenzo",
-    "surname": "Martini",
-    "gender": "male",
-    "country": "Italy",
-    "yearOfBirth": 1999,
-    "location": "Turin",
-    "languages": [
-      "Italian",
-      "English"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Start a practical discussion on plan B.",
-        "One member dominates the group talk, cutting others off. What do you do? Support quieter members by amplifying them.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Invite them in with an open question.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say Hard to say - I'm still figuring it out.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-      ],
-      "behavior": ""
+    {
+        "id": "0b7193aa-925d-4c08-9023-6141c5bb15da",
+        "name": "Lorenzo",
+        "surname": "Martini",
+        "gender": "male",
+        "country": "Italy",
+        "yearOfBirth": 1999,
+        "location": {
+            "name": "Turin",
+            "lat": 45.0703,
+            "lng": 7.6869
+        },
+        "languages": [
+            "Italian",
+            "English"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I'm a planner - I help organize the chaos.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Start a practical discussion on plan B.",
+                "One member dominates the group talk, cutting others off. What do you do? Support quieter members by amplifying them.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Invite them in with an open question.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Focus on your own angle and share later.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say Hard to say - I'm still figuring it out.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "3a5366ed-2703-4825-b0b6-55768cb4d6ea",
-    "name": "Chiara",
-    "surname": "Giordano",
-    "gender": "female",
-    "country": "Italy",
-    "yearOfBirth": 1994,
-    "location": "Naples",
-    "languages": [
-      "Italian",
-      "Spanish"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Let others talk while you reflect quietly.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-      ],
-      "behavior": ""
+    {
+        "id": "3a5366ed-2703-4825-b0b6-55768cb4d6ea",
+        "name": "Chiara",
+        "surname": "Giordano",
+        "gender": "female",
+        "country": "Italy",
+        "yearOfBirth": 1994,
+        "location": {
+            "name": "Naples",
+            "lat": 40.8518,
+            "lng": 14.2681
+        },
+        "languages": [
+            "Italian",
+            "Spanish"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Let others talk while you reflect quietly.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  },
-  {
-    "id": "49eb752f-4e06-4152-9518-41eeba93bf96",
-    "name": "Alessandro",
-    "surname": "Costa",
-    "gender": "male",
-    "country": "Italy",
-    "yearOfBirth": 1991,
-    "location": "Palermo",
-    "languages": [
-      "Italian",
-      "Spanish"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I stay neutral and observe.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-      ],
-      "behavior": ""
+    {
+        "id": "49eb752f-4e06-4152-9518-41eeba93bf96",
+        "name": "Alessandro",
+        "surname": "Costa",
+        "gender": "male",
+        "country": "Italy",
+        "yearOfBirth": 1991,
+        "location": {
+            "name": "Palermo",
+            "lat": 38.1157,
+            "lng": 13.3615
+        },
+        "languages": [
+            "Italian",
+            "Spanish"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I stay neutral and observe.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Back someone's idea and help them push it through.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
+    {
+        "id": "99b51773-1b85-403c-865c-6d9c1c692746",
+        "name": "Giulia",
+        "surname": "Fontana",
+        "gender": "female",
+        "country": "Italy",
+        "yearOfBirth": 1998,
+        "location": {
+            "name": "Verona",
+            "lat": 45.4384,
+            "lng": 10.9916
+        },
+        "languages": [
+            "Italian",
+            "German"
+        ],
+        "groupProfile": {
+            "insights": [
+                "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
+                "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
+                "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
+                "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
+                "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
+                "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
+                "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Suggest we pause and sync up.",
+                "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
+                "Two members quietly disagree. No one's addressing it. What's your reaction? Name it gently and check in with both.",
+                "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
+            ],
+            "behavior": ""
+        },
+        "profileSectionsStatus": {
+            "personalInformation": "completed",
+            "avatar": "pending",
+            "groupBehavior": "pending",
+            "voiceprint": "pending"
+        }
     }
-  },
-  {
-    "id": "99b51773-1b85-403c-865c-6d9c1c692746",
-    "name": "Giulia",
-    "surname": "Fontana",
-    "gender": "female",
-    "country": "Italy",
-    "yearOfBirth": 1998,
-    "location": "Verona",
-    "languages": [
-      "Italian",
-      "German"
-    ],
-    "groupProfile": {
-      "insights": [
-        "You've just joined a 4-person team for a local quest. You barely know them. The leader asks everyone to share how they like to contribute. What do you say? I adapt - tell me what's needed, I'll jump in.",
-        "Halfway to your destination, the group faces a delay. Tension rises. What's your move? Crack a joke or lighten the mood.",
-        "One member dominates the group talk, cutting others off. What do you do? Step in kindly to balance the space.",
-        "You arrive late to the group meetup. They've started without you. What do you feel? Unbothered - I'll jump in when I'm ready.",
-        "Your group must choose between two activities. Opinions are split. What's your role? I take a side and explain why.",
-        "One person hasn't spoken much. You're in a circle about to share ideas. What do you do? Keep it flowing - maybe they'll chime in later.",
-        "The group must solve a timed puzzle. Everyone's thinking differently. What's your instinct? Suggest we pause and sync up.",
-        "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
-        "Two members quietly disagree. No one's addressing it. What's your reaction? Name it gently and check in with both.",
-        "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-      ],
-      "behavior": ""
-    },
-    "profileSectionsStatus": {
-      "personalInformation": "completed",
-      "avatar": "pending",
-      "groupBehavior": "pending",
-      "voiceprint": "pending"
-    }
-  }
 ]
