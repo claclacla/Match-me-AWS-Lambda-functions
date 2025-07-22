@@ -61,7 +61,7 @@ const userDTO: UserDTO = {
         personalInformation: "completed",
         avatar: "pending",
         groupBehavior: "completed",
-        voiceprint: "pending"
+        groupPersonalExperience: "pending"
     }
 };
 

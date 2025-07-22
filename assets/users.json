@@ -34,7 +34,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -72,7 +72,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -110,7 +110,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -148,7 +148,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -186,7 +186,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -224,7 +224,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -262,7 +262,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -300,7 +300,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     },
     {
@@ -338,7 +338,7 @@
             "personalInformation": "completed",
             "avatar": "pending",
             "groupBehavior": "pending",
-            "voiceprint": "pending"
+            "groupPersonalExperience": "pending"
         }
     }
 ]

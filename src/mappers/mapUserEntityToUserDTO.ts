@@ -15,7 +15,7 @@ export function mapUserEntityToUserDTO({ userEntity }: { userEntity: UserEntity 
             personalInformation: userEntity.profileSectionsStatus.personalInformation,
             avatar: userEntity.profileSectionsStatus.avatar,
             groupBehavior: userEntity.profileSectionsStatus.groupBehavior,
-            voiceprint: userEntity.profileSectionsStatus.voiceprint
+            groupPersonalExperience: userEntity.profileSectionsStatus.groupPersonalExperience
         }
     }
 
