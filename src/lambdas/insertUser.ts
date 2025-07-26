@@ -65,8 +65,8 @@ export const handler = async (event: any) => {
         userDTO.profileSectionsStatus = {
             personalInformation: "completed",
             avatar: "pending",
-            groupBehavior: "pending",
-            groupPersonalExperience: "pending"
+            groupPersonalExperience: "pending",
+            groupBehavior: "pending"
         }
 
         // Create the user's entity 

@@ -18,8 +18,8 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         profileSectionsStatus: {
             personalInformation: userDTO.profileSectionsStatus.personalInformation,
             avatar: userDTO.profileSectionsStatus.avatar,
-            groupBehavior: userDTO.profileSectionsStatus.groupBehavior,
-            groupPersonalExperience: userDTO.profileSectionsStatus.groupPersonalExperience
+            groupPersonalExperience: userDTO.profileSectionsStatus.groupPersonalExperience,
+            groupBehavior: userDTO.profileSectionsStatus.groupBehavior
         }
     };
 
