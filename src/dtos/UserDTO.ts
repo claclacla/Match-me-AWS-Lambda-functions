@@ -24,7 +24,10 @@ export interface UserDTO {
     avatar?: string,
     groupProfile: {
         insights: string[],
-        behavior: string
+        behavior: string,
+        personalExperience?: {
+            description: string
+        }
     },
     match?: {
         id: string,

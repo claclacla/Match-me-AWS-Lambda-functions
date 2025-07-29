@@ -63,6 +63,31 @@ export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, 
     }));
 }
 
+export async function setUserGroupPersonalExperience({ dynamoDBClient, ownerId, personalExperience }:
+    { dynamoDBClient: DynamoDBDocumentClient, ownerId: string, personalExperience: string }): Promise<void> {
+    const item = await getByOwnerId({ dynamoDBClient, ownerId });
+
+    if (!item) {
+        throw new Error("User not found");
+    }
+
+    await dynamoDBClient.send(new UpdateCommand({
+        TableName: TABLE_NAME,
+        Key: { id: item.id },
+        UpdateExpression: 'SET #gp.#pe = :pe, #pss.#pssgpe = :pssgpe',
+        ExpressionAttributeValues: {
+            ':pe': { description: personalExperience },
+            ':pssgpe': PROFILE_SECTION_STATUS.COMPLETED
+        },
+        ExpressionAttributeNames: {
+            '#gp': 'groupProfile',
+            '#pe': 'personalExperience',
+            '#pss': 'profileSectionsStatus',
+            '#pssgpe': 'groupPersonalExperience'
+        }
+    }));
+}
+
 export async function setUserProfileSectionStatus({ dynamoDBClient, ownerId, section, value }: {
     dynamoDBClient: DynamoDBDocumentClient, ownerId: string, section: ProfileSectionKey, value: ProfileSectionStatus }): Promise<void> {
     const item = await getByOwnerId({ dynamoDBClient, ownerId });

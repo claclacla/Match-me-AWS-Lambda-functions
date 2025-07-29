@@ -7,6 +7,7 @@
     "@pinecone-database/pinecone": "^6.0.1",
     "@types/dotenv": "^6.1.1",
     "@types/uuid": "^10.0.0",
+    "busboy": "^1.6.0",
     "dotenv": "^16.6.1",
     "openai": "^5.8.2",
     "typescript": "^5.8.3",
@@ -14,6 +15,7 @@
     "zod": "^3.25.75"
   },
   "devDependencies": {
+    "@types/busboy": "^1.5.4",
     "@types/node": "^22.15.24"
   },
   "scripts": {
