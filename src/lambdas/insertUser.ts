@@ -66,7 +66,7 @@ export const handler = async (event: any) => {
             personalInformation: "completed",
             avatar: "pending",
             groupPersonalExperience: "pending",
-            groupBehavior: "pending"
+            groupInsights: "pending"
         }
 
         // Create the user's entity 

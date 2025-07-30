@@ -16,11 +16,11 @@ export interface UserEntity {
     languages: string[],
     avatar?: string,
     groupProfile: {
-        insights: string[],
-        behavior: string,
+        insights?: string[],
         personalExperience?: {
             description: string
-        }
+        },
+        behavior?: string
     },
     isMatched: BooleanString,   // Here, isMatched is a string because it's used as index in DynamoDB
     match?: {

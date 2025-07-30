@@ -6,7 +6,7 @@ import { UserDTO } from '../../dtos/UserDTO';
 import { UserEntity } from '../../entities/UserEntity';
 
 import { connect as openAIConnect } from '../../openai/connect';
-import { generateGroupBehavior } from '../../openai/generateGroupBehavior';
+//import { generateGroupBehavior } from '../../openai/generateGroupBehavior';
 
 import { connect as dynamoDBConnect } from '../../repositories/dynamoDB/connect';
 import { upsert as dynamoDBUpsert } from '../../repositories/dynamoDB/users';
@@ -60,7 +60,7 @@ const userDTO: UserDTO = {
     profileSectionsStatus: {
         personalInformation: "completed",
         avatar: "pending",
-        groupBehavior: "completed",
+        groupInsights: "completed",
         groupPersonalExperience: "pending"
     }
 };
@@ -69,8 +69,8 @@ const dynamoDBClient: DynamoDBDocumentClient = dynamoDBConnect({ region: AWS_REG
 const openai = openAIConnect({ key: OPENAI_API_KEY });
 
 async function insert({ userDTO }: { userDTO: UserDTO }) {
-    const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.groupProfile.insights });
-    userDTO.groupProfile.behavior = groupBehavior;
+    //const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.groupProfile.insights });
+    //userDTO.groupProfile.behavior = groupBehavior;
 
     const userEntity: UserEntity = mapUserDTOToUserEntity({ userDTO });
 

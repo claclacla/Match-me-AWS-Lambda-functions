@@ -33,7 +33,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -71,7 +71,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -109,7 +109,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -147,7 +147,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -185,7 +185,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -223,7 +223,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -261,7 +261,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -299,7 +299,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     },
@@ -337,7 +337,7 @@
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
-            "groupBehavior": "pending",
+            "groupInsights": "completed",
             "groupPersonalExperience": "pending"
         }
     }

@@ -8,7 +8,7 @@ import { UserDTO } from '../../dtos/UserDTO';
 import { UserEntity } from '../../entities/UserEntity';
 
 import { connect as openAIConnect } from '../../openai/connect';
-import { generateGroupBehavior } from '../../openai/generateGroupBehavior';
+//import { generateGroupBehavior } from '../../openai/generateGroupBehavior';
 
 import { connect as dynamoDBConnect } from '../../repositories/dynamoDB/connect';
 import { upsert as dynamoDBUpsert } from '../../repositories/dynamoDB/users';
@@ -40,8 +40,8 @@ async function fill() {
         const usersEntities: UserEntity[] = [];
 
         for (const userDTO of usersDTO) {
-            const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.groupProfile.insights });
-            userDTO.groupProfile.behavior = groupBehavior;
+            //const groupBehavior: string = await generateGroupBehavior({ openai, insights: userDTO.groupProfile.insights });
+            //userDTO.groupProfile.behavior = groupBehavior;
 
             const userEntity: UserEntity = mapUserDTOToUserEntity({ userDTO });
 

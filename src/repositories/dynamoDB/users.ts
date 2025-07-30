@@ -36,8 +36,8 @@ export async function getUnmatchedUsers({ dynamoDBClient }: { dynamoDBClient: Dy
     return result.Items ? (result.Items as UserEntity[]) : [];
 }
 
-export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, groupBehavior }:
-    { dynamoDBClient: DynamoDBDocumentClient, ownerId: string, insights: string[], groupBehavior: string }): Promise<void> {
+export async function setUserGroupInsights({ dynamoDBClient, ownerId, insights }:
+    { dynamoDBClient: DynamoDBDocumentClient, ownerId: string, insights: string[] }): Promise<void> {
     const item = await getByOwnerId({ dynamoDBClient, ownerId });
 
     if (!item) {
@@ -47,18 +47,16 @@ export async function setUserGroupBehavior({ dynamoDBClient, ownerId, insights, 
     await dynamoDBClient.send(new UpdateCommand({
         TableName: TABLE_NAME,
         Key: { id: item.id },
-        UpdateExpression: 'SET #gp.#in = :gpin, #gp.#be = :gpbe, #pss.#pssgb = :pssgb',
+        UpdateExpression: 'SET #gp.#in = :gpin, #pss.#pssi = :pssi',
         ExpressionAttributeValues: {
             ':gpin': insights,
-            ':gpbe': groupBehavior,
-            ':pssgb': PROFILE_SECTION_STATUS.COMPLETED
+            ':pssi': PROFILE_SECTION_STATUS.COMPLETED
         },
         ExpressionAttributeNames: {
             '#gp': 'groupProfile',
             '#in': 'insights',
-            '#be': 'behavior',
             '#pss': 'profileSectionsStatus',
-            '#pssgb': 'groupBehavior'
+            '#pssi': 'groupInsights'
         }
     }));
 }

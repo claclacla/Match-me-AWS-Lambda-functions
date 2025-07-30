@@ -23,11 +23,11 @@ export interface UserDTO {
     languages: string[],
     avatar?: string,
     groupProfile: {
-        insights: string[],
-        behavior: string,
+        insights?: string[],
         personalExperience?: {
             description: string
-        }
+        },
+        behavior?: string
     },
     match?: {
         id: string,
