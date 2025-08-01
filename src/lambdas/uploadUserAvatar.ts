@@ -51,7 +51,7 @@ export const handler = async (event: any) => {
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ imageUrl })
+            body: JSON.stringify({ avatar: imageUrl })
         };
     } catch (err: any) {
         console.error("Upload failed", err);
