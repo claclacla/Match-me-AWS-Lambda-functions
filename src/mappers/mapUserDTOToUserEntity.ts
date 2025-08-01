@@ -10,7 +10,6 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         name: userDTO.name,
         surname: userDTO.surname,
         gender: userDTO.gender,
-        location: userDTO.location,
         yearOfBirth: userDTO.yearOfBirth,
         languages: userDTO.languages,
         groupProfile: userDTO.groupProfile,
@@ -25,6 +24,10 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
 
     if(userDTO.avatar !== undefined) {
         userEntity.avatar = userDTO.avatar;
+    }
+
+    if (userDTO.location !== undefined) {
+        userEntity.location = userDTO.location;
     }
 
     if(userDTO.country !== undefined) {

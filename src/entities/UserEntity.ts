@@ -11,7 +11,7 @@ export interface UserEntity {
     surname: string,
     gender: UserGender,
     country?: string,
-    location: LocationData,
+    location?: LocationData,
     yearOfBirth: number,
     languages: string[],
     avatar?: string,
