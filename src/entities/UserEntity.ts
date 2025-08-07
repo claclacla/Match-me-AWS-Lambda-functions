@@ -3,6 +3,7 @@ import { BooleanString } from "../types/BooleanString";
 import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 import { ProfileSectionKey } from "../types/ProfileSectionKey";
 import { LocationData } from "../types/LocationData";
+import { GroupBehaviorFactors } from "../types/GroupBehaviorFactors";
 
 export interface UserEntity {
     id: string,
@@ -20,7 +21,10 @@ export interface UserEntity {
         personalExperience?: {
             description: string
         },
-        behavior?: string
+        behavior?: {
+            description: string,
+            factors: GroupBehaviorFactors,
+        }
     },
     isMatched: BooleanString,   // Here, isMatched is a string because it's used as index in DynamoDB
     match?: {

@@ -2,6 +2,7 @@ import { ProfileSectionKey } from "../types/ProfileSectionKey";
 import { ProfileSectionStatus } from "../types/ProfileSectionStatus";
 import { UserGender } from "../types/UserGender";
 import { LocationData } from "../types/LocationData";
+import { GroupBehaviorFactors } from "../types/GroupBehaviorFactors";
 
 export const GENDER_OPTIONS = [
     { label: 'Uomo', value: 'male' as UserGender },
@@ -27,7 +28,10 @@ export interface UserDTO {
         personalExperience?: {
             description: string
         },
-        behavior?: string
+        behavior?: {
+            description: string,
+            factors: GroupBehaviorFactors,
+        }
     },
     match?: {
         id: string,

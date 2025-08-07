@@ -54,8 +54,7 @@ const userDTO: UserDTO = {
             "After a long shared day, someone asks: 'How did you feel about our group?' You say… I liked how we all brought something unique.",
             "Two members quietly disagree. No one’s addressing it. What’s your reaction? Name it gently and check in with both.",
             "It’s time to part ways. Someone suggests staying in touch. What do you feel? Absolutely — I value these bonds."
-        ],
-        behavior: "",
+        ]
     },
     profileSectionsStatus: {
         personalInformation: "completed",
