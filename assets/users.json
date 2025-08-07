@@ -27,13 +27,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-            ]
+            ],
+            "personalExperience": {
+                "description": "Last summer, I joined a photography workshop in Tuscany with five strangers. The instructor was chaotic, changing plans constantly. I found myself naturally stepping into an organizing role - creating a shared Google Drive for our photos, setting up a group chat for daily meetups, and even mediating when two participants disagreed about the best shooting locations. I used humor to diffuse tension when our van broke down, and made sure everyone had a chance to share their work during critiques. While I appreciated everyone's unique perspective, I was ready to move on when it ended - no need to force lasting connections."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -64,13 +67,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Name it gently and check in with both.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I was part of a startup accelerator program with four other founders. We had to pitch our ideas to investors every week. One guy, Marco, would dominate every discussion, talking over everyone. I started gently redirecting conversations back to others, saying things like 'That's interesting, but let's hear what Sofia thinks about this.' When two team members had a disagreement about our pitch strategy, I pulled them aside individually to understand both perspectives, then facilitated a conversation between them. I preferred to work on my pitch materials alone rather than collaborate, and when the program ended, I was relieved to go back to working independently."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -101,13 +107,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I joined a volunteer group cleaning up a local park. When I arrived 15 minutes late, everyone was already working. I felt embarrassed and tried to blend in quietly. The group was divided between focusing on the main area or spreading out to cover more ground. I took a side, arguing that we should focus on the main area first since that's where most people gather. When one volunteer kept interrupting others during our planning session, I gently redirected the conversation back to quieter members. I supported another volunteer's idea to organize the trash by type, helping them implement it. The day was productive but I wasn't sure we really connected as a group. I might stay in touch with one person who seemed genuine."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -138,13 +147,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I was the social coordinator for a university study group preparing for finals. My role was keeping everyone motivated and connected. When stress levels rose during our study sessions, I'd crack jokes or suggest quick breaks to lighten the mood. One student, Luca, would dominate our discussions, so I'd gently redirect by saying things like 'Great point, but let's hear from others too.' I noticed Anna was quiet during our sessions, so I'd ask her directly: 'Anna, what do you think about this topic?' I preferred to study certain subjects alone, then share my insights with the group. When two members disagreed about study methods, I observed how they handled it rather than intervening - it revealed their true personalities. After finals, I was ready to move on to new projects."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -175,13 +187,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I organized a weekend hiking trip with five friends. When our train was delayed, I let everyone else discuss the situation while I quietly thought through our options. One friend, Giulia, kept interrupting others during our planning session, but I stayed out of it - it wasn't my place to intervene. When we had to choose between two different trails, I listened to everyone's preferences, then suggested we do a shorter version of the harder trail as a compromise. I supported another friend's idea to bring extra water and snacks, helping them prepare the supplies. I appreciated how each person contributed something different to the group dynamic. When two friends disagreed about the pace, I kept the group moving forward, knowing they'd work it out. After the trip, I was ready to return to my usual routine."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -212,13 +227,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say Hard to say - I'm still figuring it out.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I was part of a coding bootcamp team project. When our server crashed during a demo, I immediately started discussing backup options and alternative approaches rather than panicking. One team member, Roberto, kept talking over everyone during our meetings, so I made sure to amplify the ideas of quieter members by saying things like 'That's exactly what Maria was suggesting earlier' or 'Let's build on Paolo's idea.' When I arrived late to a meeting, I wasn't bothered - I just jumped in when I was ready. We had to choose between two different tech stacks, and I took a side, explaining why I preferred React over Vue. I invited our quietest member, Sofia, into discussions by asking her directly for input. I preferred to work on my own code sections independently, then share my progress. I'm still not sure how I feel about the group dynamic - it's complicated. When someone suggested we keep in touch after the project, I said maybe, depending on how things evolve."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -249,13 +267,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say It was fine - we worked, not sure we clicked.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Watch how it plays out - dynamics reveal truth.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Not really - I prefer to move on."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I joined a cooking class in Naples with four other students. The instructor asked what roles we wanted, and I said I'd adapt to whatever was needed - I ended up helping with prep work and cleanup. When our pasta dough wasn't working and tension rose, I let others discuss while I quietly observed the problem. One student, Marco, kept dominating the conversation, so I gently redirected by saying 'Let's hear from everyone about their technique.' When I arrived late to the second class, I wasn't bothered and just jumped in when ready. We had to choose between making ravioli or lasagna, and I took a side, explaining why I preferred ravioli. I kept the conversation flowing during our cooking session, hoping quieter members would join in naturally. I supported another student's idea to add fresh herbs to our sauce, helping them implement it. The class was fine - we worked well together but I'm not sure we really clicked. When two students disagreed about cooking methods, I watched how they handled it - it revealed their true personalities. After the class ended, I wasn't interested in staying in touch."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     },
     {
@@ -286,7 +307,10 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Keep things moving - it'll sort itself.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I participated in a language exchange program in Palermo. When the coordinator asked what I could contribute, I said I'd adapt to whatever was needed - I ended up helping organize conversation groups and cultural activities. When our planned outdoor event was rained out and tension rose, I cracked jokes about Sicilian weather to lighten the mood. One participant, Lucia, kept interrupting others during our discussions, so I gently redirected conversations back to quieter members. When I arrived late to a session, I wasn't bothered and just jumped in when ready. We had to choose between visiting historical sites or local markets, and I stayed neutral, observing how others made the decision. I kept conversations flowing during our activities, hoping quieter members would join in naturally. I supported another participant's idea to organize a traditional Sicilian dinner, helping them plan the menu and logistics. I appreciated how everyone brought something unique to the cultural exchange. When two participants disagreed about which dialect to focus on, I kept the group moving forward, knowing they'd work it out. After the program ended, I said maybe we'd stay in touch, depending on how things evolve."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
@@ -323,13 +347,16 @@
                 "After a long shared day, someone asks: 'How did you feel about our group?' You say I liked how we all brought something unique.",
                 "Two members quietly disagree. No one's addressing it. What's your reaction? Name it gently and check in with both.",
                 "It's time to part ways. Someone suggests staying in touch. What do you feel? Maybe - depends on how things evolve."
-            ]
+            ],
+            "personalExperience": {
+                "description": "I joined a theater workshop in Verona with five other participants. When the director asked what roles we wanted, I said I'd adapt to whatever was needed - I ended up helping with set design and props. When our rehearsal was running behind schedule and tension rose, I cracked jokes about Shakespeare's long monologues to lighten the mood. One actor, Marco, kept dominating our discussions, so I gently redirected conversations to include others. When I arrived late to a rehearsal, I wasn't bothered and just jumped in when ready. We had to choose between performing a comedy or drama, and I took a side, explaining why I preferred comedy. I kept the energy flowing during our rehearsals, hoping quieter members would join in naturally. When everyone was thinking differently about how to stage a scene, I suggested we pause and sync up to align our vision. I appreciated how everyone brought something unique to the performance. When two actors disagreed about their characters' motivations, I named the tension gently and checked in with both to understand their perspectives. After the performance, I said maybe we'd stay in touch, depending on how things evolve."
+            }
         },
         "profileSectionsStatus": {
             "personalInformation": "completed",
             "avatar": "pending",
             "groupInsights": "completed",
-            "groupPersonalExperience": "pending"
+            "groupPersonalExperience": "completed"
         }
     }
 ]
