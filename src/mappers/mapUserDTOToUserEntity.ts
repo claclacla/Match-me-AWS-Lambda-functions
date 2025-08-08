@@ -13,7 +13,7 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
         yearOfBirth: userDTO.yearOfBirth,
         languages: userDTO.languages,
         groupProfile: userDTO.groupProfile,
-        isReadyForMatch: "false",
+        needsGroupBehaviorUpdate: "false",
         isMatched: "false",
         profileSectionsStatus: {
             personalInformation: userDTO.profileSectionsStatus.personalInformation,
@@ -36,11 +36,11 @@ export function mapUserDTOToUserEntity({ userDTO }: { userDTO: UserDTO }) {
     }
 
     if(userDTO.groupProfile.insights !== undefined && userDTO.groupProfile.insights.length > 0) {
-        userEntity.isReadyForMatch = "true";
+        userEntity.needsGroupBehaviorUpdate = "true";
     }
 
     if(userDTO.groupProfile.personalExperience !== undefined && userDTO.groupProfile.personalExperience.description !== undefined) {
-        userEntity.isReadyForMatch = "true";
+        userEntity.needsGroupBehaviorUpdate = "true";
     }
 
     if (userDTO.match?.id !== undefined) {

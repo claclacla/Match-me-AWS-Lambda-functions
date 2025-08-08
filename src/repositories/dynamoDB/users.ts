@@ -47,18 +47,18 @@ export async function setUserGroupInsights({ dynamoDBClient, ownerId, insights }
     await dynamoDBClient.send(new UpdateCommand({
         TableName: TABLE_NAME,
         Key: { id: item.id },
-        UpdateExpression: 'SET #gp.#in = :gpin, #pss.#pssi = :pssi, #isrm = :isrm',
+        UpdateExpression: 'SET #gp.#in = :gpin, #pss.#pssi = :pssi, #ngbu = :ngbu',
         ExpressionAttributeValues: {
             ':gpin': insights,
             ':pssi': PROFILE_SECTION_STATUS.COMPLETED,
-            ':isrm': "true"
+            ':ngbu': "true"
         },
         ExpressionAttributeNames: {
             '#gp': 'groupProfile',
             '#in': 'insights',
             '#pss': 'profileSectionsStatus',
             '#pssi': 'groupInsights',
-            '#isrm': 'isReadyForMatch'
+            '#ngbu': 'needsGroupBehaviorUpdate'
         }
     }));
 }
@@ -74,18 +74,18 @@ export async function setUserGroupPersonalExperience({ dynamoDBClient, ownerId, 
     await dynamoDBClient.send(new UpdateCommand({
         TableName: TABLE_NAME,
         Key: { id: item.id },
-        UpdateExpression: 'SET #gp.#pe = :pe, #pss.#pssgpe = :pssgpe, #isrm = :isrm',
+        UpdateExpression: 'SET #gp.#pe = :pe, #pss.#pssgpe = :pssgpe, #ngbu = :ngbu',
         ExpressionAttributeValues: {
             ':pe': { description: personalExperience },
             ':pssgpe': PROFILE_SECTION_STATUS.COMPLETED,
-            ':isrm': "true"
+            ':ngbu': "true"
         },
         ExpressionAttributeNames: {
             '#gp': 'groupProfile',
             '#pe': 'personalExperience',
             '#pss': 'profileSectionsStatus',
             '#pssgpe': 'groupPersonalExperience',
-            '#isrm': 'isReadyForMatch'
+            '#ngbu': 'needsGroupBehaviorUpdate'
         }
     }));
 }

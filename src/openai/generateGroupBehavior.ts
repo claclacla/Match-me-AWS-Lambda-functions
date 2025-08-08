@@ -25,7 +25,7 @@ export async function generateGroupBehavior({
             { role: "system", content: systemPrompt },
             {
                 role: "user",
-                content: `Here’s what the user shared during onboarding:\n${userInsights}\n\nWhat kind of group member are they likely to be? Write a short paragraph describing them.`,
+                content: `Here's what the user shared during onboarding:\n${userInsights}\n\nWhat kind of group member are they likely to be? Write a short paragraph describing them.`,
             },
         ],
         temperature: 0.8,

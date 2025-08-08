@@ -26,7 +26,7 @@ export interface UserEntity {
             factors: GroupBehaviorFactors,
         }
     },
-    isReadyForMatch: BooleanString,
+    needsGroupBehaviorUpdate: BooleanString,
     isMatched: BooleanString,   
     match?: {
         id: string;
