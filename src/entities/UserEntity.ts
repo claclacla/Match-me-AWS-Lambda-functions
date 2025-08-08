@@ -26,7 +26,8 @@ export interface UserEntity {
             factors: GroupBehaviorFactors,
         }
     },
-    isMatched: BooleanString,   // Here, isMatched is a string because it's used as index in DynamoDB
+    isReadyForMatch: BooleanString,
+    isMatched: BooleanString,   
     match?: {
         id: string;
     },

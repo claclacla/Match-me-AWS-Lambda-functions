@@ -72,15 +72,6 @@ npm run insert-user
 
 ```
 
-
-- Match users
-
-```bash
-
-npm run match-users
-
-```
-
 --------------------------------------------------------------------------------
 
 ## Deploy
